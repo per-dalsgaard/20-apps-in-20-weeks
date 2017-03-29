@@ -39,17 +39,33 @@ class ViewController: UIViewController {
         }
         
         scrollView.clipsToBounds = false
-        scrollView.contentSize = CGSize(width: contentWidth, height: view.frame.size.height)
+        let contentSizeWidth = CGFloat(images.count) * scrollViewWidth
+        scrollView.contentSize = CGSize(width: contentSizeWidth, height: view.frame.size.height)
     }
     
    
     @IBAction func leftSwipe(_ sender: UISwipeGestureRecognizer) {
-        // TODO
+        let nextPage = scrollView.contentOffset.x / scrollView.frame.size.width - 1
+        if nextPage < 0 {
+            return
+        }
+        
+        scrollToNext(page: nextPage)
+
     }
     
     @IBAction func rightSwipe(_ sender: UISwipeGestureRecognizer) {
-        // TODO
-        scrollView.setContentOffset(CGPoint(x: 10, y: 0), animated: true)
+        let nextPage = scrollView.contentOffset.x / scrollView.frame.size.width + 1
+        if nextPage >= CGFloat(images.count) {
+            return
+        }
+        
+        scrollToNext(page: nextPage)
+    }
+    
+    func scrollToNext(page: CGFloat) {
+        let nextX = page * scrollView.frame.size.width
+        scrollView.setContentOffset(CGPoint(x: nextX, y: 0), animated: true)
     }
 }
 
