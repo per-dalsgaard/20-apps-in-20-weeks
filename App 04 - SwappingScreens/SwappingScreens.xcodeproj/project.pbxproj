@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC62F44F1E9130CB00179C7D /* MusicListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62F44E1E9130CB00179C7D /* MusicListVC.swift */; };
+		EC62F4511E91321F00179C7D /* PlaySongVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC62F4501E91321F00179C7D /* PlaySongVC.swift */; };
 		ECF967991E912EB40019A197 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF967981E912EB40019A197 /* AppDelegate.swift */; };
-		ECF9679B1E912EB40019A197 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9679A1E912EB40019A197 /* ViewController.swift */; };
+		ECF9679B1E912EB40019A197 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF9679A1E912EB40019A197 /* LoginVC.swift */; };
 		ECF9679E1E912EB40019A197 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF9679C1E912EB40019A197 /* Main.storyboard */; };
 		ECF967A01E912EB40019A197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF9679F1E912EB40019A197 /* Assets.xcassets */; };
 		ECF967A31E912EB40019A197 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF967A11E912EB40019A197 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC62F44E1E9130CB00179C7D /* MusicListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListVC.swift; sourceTree = "<group>"; };
+		EC62F4501E91321F00179C7D /* PlaySongVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySongVC.swift; sourceTree = "<group>"; };
 		ECF967951E912EB40019A197 /* SwappingScreens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwappingScreens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF967981E912EB40019A197 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECF9679A1E912EB40019A197 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECF9679A1E912EB40019A197 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		ECF9679D1E912EB40019A197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECF9679F1E912EB40019A197 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECF967A21E912EB40019A197 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				ECF967981E912EB40019A197 /* AppDelegate.swift */,
-				ECF9679A1E912EB40019A197 /* ViewController.swift */,
+				ECF9679A1E912EB40019A197 /* LoginVC.swift */,
 				ECF9679C1E912EB40019A197 /* Main.storyboard */,
 				ECF9679F1E912EB40019A197 /* Assets.xcassets */,
 				ECF967A11E912EB40019A197 /* LaunchScreen.storyboard */,
 				ECF967A41E912EB40019A197 /* Info.plist */,
+				EC62F44E1E9130CB00179C7D /* MusicListVC.swift */,
+				EC62F4501E91321F00179C7D /* PlaySongVC.swift */,
 			);
 			path = SwappingScreens;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECF9679B1E912EB40019A197 /* ViewController.swift in Sources */,
+				EC62F44F1E9130CB00179C7D /* MusicListVC.swift in Sources */,
+				EC62F4511E91321F00179C7D /* PlaySongVC.swift in Sources */,
+				ECF9679B1E912EB40019A197 /* LoginVC.swift in Sources */,
 				ECF967991E912EB40019A197 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +307,7 @@
 				ECF967A91E912EB40019A197 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
