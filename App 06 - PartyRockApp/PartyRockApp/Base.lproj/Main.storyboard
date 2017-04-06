@@ -76,7 +76,7 @@
                                 <rect key="frame" x="0.0" y="211" width="320" height="357"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="4sD-bM-U2K">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyTableViewCell" rowHeight="83" id="4sD-bM-U2K" customClass="PartyTableViewCell" customModule="PartyRockApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4sD-bM-U2K" id="rdu-pR-n1n">
@@ -106,6 +106,10 @@
                                                 <constraint firstItem="fJN-W3-x77" firstAttribute="leading" secondItem="Qlr-Cn-3NQ" secondAttribute="trailing" constant="8" id="rZ5-Je-zx8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImageView" destination="Qlr-Cn-3NQ" id="Tyv-QE-VZN"/>
+                                            <outlet property="videoTitleLabel" destination="fJN-W3-x77" id="5S3-xo-oe8"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -125,6 +129,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="M5k-8i-f0u" id="UcO-HO-APd"/>
                         <segue destination="6Tw-Be-dQy" kind="showDetail" identifier="VideoViewController" id="PQd-BU-BFt"/>
                     </connections>
                 </viewController>
@@ -144,11 +149,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5U7-y6-AY0">
-                                <rect key="frame" x="40" y="28" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAK-Ze-OUx">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -156,14 +156,30 @@
                                     <constraint firstAttribute="height" constant="220" id="0uv-2F-PEE"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOJ-ns-QDN">
+                                <rect key="frame" x="26" y="250" width="268" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Iyw-3z-j7u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uOJ-ns-QDN" firstAttribute="top" secondItem="dAK-Ze-OUx" secondAttribute="bottom" constant="30" id="4k0-ep-ecR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uOJ-ns-QDN" secondAttribute="trailing" constant="10" id="Eq2-ee-6L1"/>
                             <constraint firstItem="dAK-Ze-OUx" firstAttribute="top" secondItem="Es8-tt-Zju" secondAttribute="top" id="Ww3-aZ-LHK"/>
                             <constraint firstAttribute="trailing" secondItem="dAK-Ze-OUx" secondAttribute="trailing" id="ijJ-Z0-k7W"/>
+                            <constraint firstItem="uOJ-ns-QDN" firstAttribute="leading" secondItem="Es8-tt-Zju" secondAttribute="leadingMargin" constant="10" id="iq0-9e-tQk"/>
                             <constraint firstItem="dAK-Ze-OUx" firstAttribute="leading" secondItem="Es8-tt-Zju" secondAttribute="leading" id="waz-xW-p8w"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoTitleLabel" destination="uOJ-ns-QDN" id="eFa-u3-rW9"/>
+                        <outlet property="webView" destination="dAK-Ze-OUx" id="KXQ-eg-1Hs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mD5-O8-cmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

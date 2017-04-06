@@ -14,6 +14,8 @@
 		EC36B1951E958CAA00A78E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC36B1931E958CAA00A78E61 /* LaunchScreen.storyboard */; };
 		EC88F88F1E95968D00B67C96 /* still time.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC88F88E1E95968D00B67C96 /* still time.ttf */; };
 		EC88F8911E9597E300B67C96 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88F8901E9597E300B67C96 /* VideoViewController.swift */; };
+		EC88F8931E96CBC700B67C96 /* PartyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88F8921E96CBC700B67C96 /* PartyTableViewCell.swift */; };
+		EC88F8951E96CDA800B67C96 /* PartyRockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC88F8941E96CDA800B67C96 /* PartyRockModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		EC36B1961E958CAA00A78E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC88F88E1E95968D00B67C96 /* still time.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "still time.ttf"; sourceTree = "<group>"; };
 		EC88F8901E9597E300B67C96 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		EC88F8921E96CBC700B67C96 /* PartyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyTableViewCell.swift; sourceTree = "<group>"; };
+		EC88F8941E96CDA800B67C96 /* PartyRockModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyRockModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		EC88F88B1E958D2B00B67C96 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC88F8921E96CBC700B67C96 /* PartyTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 		EC88F88C1E958D3100B67C96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC88F8941E96CDA800B67C96 /* PartyRockModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -176,7 +182,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC36B18D1E958CAA00A78E61 /* MainViewController.swift in Sources */,
+				EC88F8951E96CDA800B67C96 /* PartyRockModel.swift in Sources */,
 				EC36B18B1E958CAA00A78E61 /* AppDelegate.swift in Sources */,
+				EC88F8931E96CBC700B67C96 /* PartyTableViewCell.swift in Sources */,
 				EC88F8911E9597E300B67C96 /* VideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
