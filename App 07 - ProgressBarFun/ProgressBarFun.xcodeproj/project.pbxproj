@@ -12,6 +12,8 @@
 		EC956CB81E99192A0097F717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC956CB61E99192A0097F717 /* Main.storyboard */; };
 		EC956CBA1E99192A0097F717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC956CB91E99192A0097F717 /* Assets.xcassets */; };
 		EC956CBD1E99192A0097F717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC956CBB1E99192A0097F717 /* LaunchScreen.storyboard */; };
+		ECEF34C81E991991004760BE /* ProgressBarDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF34C71E991991004760BE /* ProgressBarDraw.swift */; };
+		ECEF34CA1E9919A5004760BE /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF34C91E9919A5004760BE /* ProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		EC956CB91E99192A0097F717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC956CBC1E99192A0097F717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC956CBE1E99192A0097F717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEF34C71E991991004760BE /* ProgressBarDraw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarDraw.swift; sourceTree = "<group>"; };
+		ECEF34C91E9919A5004760BE /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,40 @@
 		EC956CB11E99192A0097F717 /* ProgressBarFun */ = {
 			isa = PBXGroup;
 			children = (
+				ECEF34C51E99195D004760BE /* Model */,
+				ECEF34C61E991961004760BE /* View */,
+				ECEF34C41E991957004760BE /* Controller */,
 				EC956CB21E99192A0097F717 /* AppDelegate.swift */,
-				EC956CB41E99192A0097F717 /* ViewController.swift */,
 				EC956CB61E99192A0097F717 /* Main.storyboard */,
 				EC956CB91E99192A0097F717 /* Assets.xcassets */,
 				EC956CBB1E99192A0097F717 /* LaunchScreen.storyboard */,
 				EC956CBE1E99192A0097F717 /* Info.plist */,
 			);
 			path = ProgressBarFun;
+			sourceTree = "<group>";
+		};
+		ECEF34C41E991957004760BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC956CB41E99192A0097F717 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ECEF34C51E99195D004760BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ECEF34C61E991961004760BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECEF34C71E991991004760BE /* ProgressBarDraw.swift */,
+				ECEF34C91E9919A5004760BE /* ProgressBarView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEF34C81E991991004760BE /* ProgressBarDraw.swift in Sources */,
+				ECEF34CA1E9919A5004760BE /* ProgressBarView.swift in Sources */,
 				EC956CB51E99192A0097F717 /* ViewController.swift in Sources */,
 				EC956CB31E99192A0097F717 /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +331,7 @@
 				EC956CC31E99192A0097F717 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
