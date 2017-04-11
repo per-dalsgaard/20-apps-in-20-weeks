@@ -18,10 +18,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
 
-        
-//        generateTestData()
+        // generateTestItems()
         attemptFetch()
     }
 
@@ -76,8 +74,20 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
-        let dateSort = NSSortDescriptor(key: "title", ascending: true)
-        fetchRequest.sortDescriptors = [dateSort]
+        let dateSort = NSSortDescriptor(key: "created", ascending: false)
+        let priceSort = NSSortDescriptor(key: "price", ascending: true)
+        let titleSort = NSSortDescriptor(key: "title", ascending: true)
+        
+        switch segment.selectedSegmentIndex {
+        case 0:
+            fetchRequest.sortDescriptors = [dateSort]
+        case 1:
+            fetchRequest.sortDescriptors = [priceSort]
+        case 2:
+            fetchRequest.sortDescriptors = [titleSort]
+        default:
+            print("Unknown selected segment index")
+        }
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         controller.delegate = self
@@ -124,8 +134,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
     }
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+        attemptFetch()
+        tableView.reloadData()
+    }
     
-    func generateTestData() {
+    func generateTestItems() {
         let item = Item(context: context)
         item.title = "Test 1"
         item.price = 120
