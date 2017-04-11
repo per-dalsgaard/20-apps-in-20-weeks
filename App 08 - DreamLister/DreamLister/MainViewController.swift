@@ -49,21 +49,40 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemTableViewCell", for: indexPath) as! ItemTableViewCell
         configureCell(cell: cell, indexPath: indexPath)
-        return UITableViewCell()
+        return cell
     }
     
     func configureCell(cell: ItemTableViewCell, indexPath: IndexPath) {
-        // TODO: Update cell
         let item = controller.object(at: indexPath)
         cell.configureCell(item: item)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let objs = controller.fetchedObjects , objs.count > 0 {
+            let item = objs[indexPath.row]
+            performSegue(withIdentifier: "ItemDetailsViewController", sender: item)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ItemDetailsViewController" {
+            if let destination = segue.destination as? ItemDetailsViewController {
+                if let item = sender as? Item {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
+    
     func attemptFetch() {
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
-        let dateSort = NSSortDescriptor(key: "created", ascending: false)
+        let dateSort = NSSortDescriptor(key: "title", ascending: true)
         fetchRequest.sortDescriptors = [dateSort]
         
-        controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        controller.delegate = self
+        
+        self.controller = controller
         
         do {
             try controller.performFetch()

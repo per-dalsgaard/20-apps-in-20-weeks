@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EC2989601E998847002B2282 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC29895F1E998847002B2282 /* MaterialView.swift */; };
 		EC2989621E999009002B2282 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2989611E999009002B2282 /* ItemTableViewCell.swift */; };
+		ECE3ADC21E9BE3F800EF1630 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3ADC11E9BE3F800EF1630 /* ItemDetailsViewController.swift */; };
+		ECE3ADC41E9C0D2C00EF1630 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE3ADC31E9C0D2C00EF1630 /* CustomTextField.swift */; };
 		ECEF34D81E992189004760BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF34D71E992189004760BE /* AppDelegate.swift */; };
 		ECEF34DA1E992189004760BE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEF34D91E992189004760BE /* MainViewController.swift */; };
 		ECEF34DD1E992189004760BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEF34DB1E992189004760BE /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* Begin PBXFileReference section */
 		EC29895F1E998847002B2282 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		EC2989611E999009002B2282 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		ECE3ADC11E9BE3F800EF1630 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
+		ECE3ADC31E9C0D2C00EF1630 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		ECEF34D41E992189004760BE /* DreamLister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamLister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEF34D71E992189004760BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECEF34D91E992189004760BE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				ECEF34D91E992189004760BE /* MainViewController.swift */,
+				ECE3ADC11E9BE3F800EF1630 /* ItemDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -52,6 +57,7 @@
 		EC29895D1E99868E002B2282 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ECE3ADC31E9C0D2C00EF1630 /* CustomTextField.swift */,
 				EC29895F1E998847002B2282 /* MaterialView.swift */,
 				EC2989611E999009002B2282 /* ItemTableViewCell.swift */,
 			);
@@ -169,8 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE3ADC41E9C0D2C00EF1630 /* CustomTextField.swift in Sources */,
 				ECEF34DA1E992189004760BE /* MainViewController.swift in Sources */,
 				ECEF34D81E992189004760BE /* AppDelegate.swift in Sources */,
+				ECE3ADC21E9BE3F800EF1630 /* ItemDetailsViewController.swift in Sources */,
 				EC2989621E999009002B2282 /* ItemTableViewCell.swift in Sources */,
 				ECEF34E01E992189004760BE /* DreamLister.xcdatamodeld in Sources */,
 				EC2989601E998847002B2282 /* MaterialView.swift in Sources */,
