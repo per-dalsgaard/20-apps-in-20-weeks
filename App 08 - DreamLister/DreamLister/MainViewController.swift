@@ -19,7 +19,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // generateTestItems()
+//        generateTestItems()
         attemptFetch()
     }
 
@@ -77,6 +77,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
         let priceSort = NSSortDescriptor(key: "price", ascending: true)
         let titleSort = NSSortDescriptor(key: "title", ascending: true)
+        let itemTypeSort = NSSortDescriptor(key: "toItemType.type", ascending: true)
+
         
         switch segment.selectedSegmentIndex {
         case 0:
@@ -85,6 +87,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             fetchRequest.sortDescriptors = [priceSort]
         case 2:
             fetchRequest.sortDescriptors = [titleSort]
+        case 3:
+            fetchRequest.sortDescriptors = [itemTypeSort]
         default:
             print("Unknown selected segment index")
         }
@@ -142,27 +146,27 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func generateTestItems() {
         let item = Item(context: context)
         item.title = "Test 1"
-        item.price = 120
+        item.price = 100
         item.details = "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum."
         
         let item2 = Item(context: context)
-        item2.title = "Test 1"
-        item2.price = 120
+        item2.title = "Test 2"
+        item2.price = 200
         item2.details = "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum."
         
         let item3 = Item(context: context)
-        item3.title = "Test 1"
-        item3.price = 120
+        item3.title = "Test 3"
+        item3.price = 300
         item3.details = "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum."
         
         let item4 = Item(context: context)
-        item4.title = "Test 1"
-        item4.price = 120
+        item4.title = "Test 4"
+        item4.price = 400
         item4.details = "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum."
         
         let item5 = Item(context: context)
-        item5.title = "Test 1"
-        item5.price = 120
+        item5.title = "Test 5"
+        item5.price = 500
         item5.details = "Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum."
         
         ad.saveContext()

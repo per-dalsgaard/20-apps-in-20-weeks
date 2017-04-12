@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="r7o-Nu-2Fs">
-    <device id="retina4_0" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Tia-uH-kOg">
-                                <rect key="frame" x="36" y="84" width="248" height="29"/>
+                                <rect key="frame" x="40" y="84" width="688" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="EWU-2A-ia1"/>
                                 </constraints>
@@ -31,6 +31,7 @@
                                     <segment title="Newest"/>
                                     <segment title="Price"/>
                                     <segment title="Title"/>
+                                    <segment title="Type"/>
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -38,15 +39,15 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sRy-v0-r6V">
-                                <rect key="frame" x="16" y="132" width="288" height="436"/>
+                                <rect key="frame" x="20" y="132" width="728" height="892"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ItemTableViewCell" rowHeight="150" id="EMA-CV-stc" customClass="ItemTableViewCell" customModule="DreamLister" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="288" height="150"/>
+                                        <rect key="frame" x="0.0" y="28" width="728" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EMA-CV-stc" id="iCP-mS-RrE">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="728" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-6a-036">
@@ -164,18 +165,18 @@
                         <viewControllerLayoutGuide type="bottom" id="pFS-12-FKd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dgt-dx-A5X">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePick" translatesAutoresizingMaskIntoConstraints="NO" id="EOl-0s-x6r">
-                                <rect key="frame" x="16" y="72" width="100" height="100"/>
+                                <rect key="frame" x="20" y="72" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="QiG-Hq-7LO"/>
                                     <constraint firstAttribute="width" constant="100" id="oME-ct-IcW"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bze-1R-I2F">
-                                <rect key="frame" x="16" y="72.5" width="100" height="100"/>
+                                <rect key="frame" x="20" y="72.5" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="IYc-gg-Gml"/>
                                     <constraint firstAttribute="height" constant="100" id="fir-o7-jPx"/>
@@ -185,7 +186,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d9F-C0-rBO" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
-                                <rect key="frame" x="124" y="82" width="180" height="40"/>
+                                <rect key="frame" x="128" y="82" width="620" height="40"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="g4Y-aK-2Fv"/>
@@ -195,7 +196,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPN-cc-xWE" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
-                                <rect key="frame" x="124" y="132" width="180" height="40"/>
+                                <rect key="frame" x="128" y="132" width="620" height="40"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sRE-en-pCR"/>
@@ -205,7 +206,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPS-MJ-zrB" customClass="CustomTextField" customModule="DreamLister" customModuleProvider="target">
-                                <rect key="frame" x="16" y="182.5" width="288" height="60"/>
+                                <rect key="frame" x="20" y="182.5" width="728" height="60"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="mqV-hj-C0B"/>
@@ -215,13 +216,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pw4-o5-YXW">
-                                <rect key="frame" x="16" y="284" width="288" height="216"/>
+                                <rect key="frame" x="20" y="740" width="728" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="216" id="ODC-Ih-bRi"/>
                                 </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3h4-jB-06v">
-                                <rect key="frame" x="16" y="508" width="288" height="40"/>
+                                <rect key="frame" x="20" y="964" width="728" height="40"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Jse-iq-Udg"/>
@@ -235,10 +236,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6m-Bc-NCg">
-                                <rect key="frame" x="113.5" y="255" width="93" height="21"/>
+                                <rect key="frame" x="20" y="711" width="150" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="Xnc-9Y-uoq"/>
+                                    <constraint firstAttribute="width" constant="150" id="Xnc-9Y-uoq"/>
                                     <constraint firstAttribute="height" constant="21" id="sKM-gH-HUp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Item Type" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdR-l3-pmd">
+                                <rect key="frame" x="598" y="711" width="150" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="tcR-I7-8Oo"/>
+                                    <constraint firstAttribute="height" constant="21" id="yhy-L7-Itz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,7 +259,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pFS-12-FKd" firstAttribute="top" secondItem="3h4-jB-06v" secondAttribute="bottom" constant="20" id="0s5-SG-zNM"/>
-                            <constraint firstItem="E6m-Bc-NCg" firstAttribute="centerX" secondItem="Dgt-dx-A5X" secondAttribute="centerX" id="5Gq-o3-2UK"/>
                             <constraint firstItem="Bze-1R-I2F" firstAttribute="centerX" secondItem="EOl-0s-x6r" secondAttribute="centerX" id="6qe-tJ-b7Y"/>
                             <constraint firstItem="Pw4-o5-YXW" firstAttribute="top" secondItem="E6m-Bc-NCg" secondAttribute="bottom" constant="8" id="72W-BX-XtL"/>
                             <constraint firstItem="d9F-C0-rBO" firstAttribute="leading" secondItem="Bze-1R-I2F" secondAttribute="trailing" constant="8" id="8kc-oo-2kd"/>
@@ -257,11 +267,14 @@
                             <constraint firstItem="iPS-MJ-zrB" firstAttribute="top" secondItem="Bze-1R-I2F" secondAttribute="bottom" constant="10" id="LaY-AG-TvF"/>
                             <constraint firstItem="Bze-1R-I2F" firstAttribute="centerY" secondItem="EOl-0s-x6r" secondAttribute="centerY" id="ONL-Ig-dHD"/>
                             <constraint firstItem="Pw4-o5-YXW" firstAttribute="leading" secondItem="Dgt-dx-A5X" secondAttribute="leadingMargin" id="Ou5-WV-qvT"/>
+                            <constraint firstItem="Pw4-o5-YXW" firstAttribute="top" secondItem="gdR-l3-pmd" secondAttribute="bottom" constant="8" id="S9b-4C-dpp"/>
                             <constraint firstItem="yPN-cc-xWE" firstAttribute="leading" secondItem="Bze-1R-I2F" secondAttribute="trailing" constant="8" id="SuB-pb-Bji"/>
                             <constraint firstItem="yPN-cc-xWE" firstAttribute="top" secondItem="d9F-C0-rBO" secondAttribute="bottom" constant="10" id="UJx-Aa-SCZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gdR-l3-pmd" secondAttribute="trailing" id="WpA-YJ-5jL"/>
                             <constraint firstItem="d9F-C0-rBO" firstAttribute="top" secondItem="KTs-U4-evG" secondAttribute="bottom" constant="18" id="Yqp-jc-xvN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pw4-o5-YXW" secondAttribute="trailing" id="efW-Ss-xt2"/>
                             <constraint firstItem="EOl-0s-x6r" firstAttribute="top" secondItem="KTs-U4-evG" secondAttribute="bottom" constant="8" id="jn9-mC-gaA"/>
+                            <constraint firstItem="E6m-Bc-NCg" firstAttribute="leading" secondItem="Dgt-dx-A5X" secondAttribute="leadingMargin" id="k3Q-wr-U8f"/>
                             <constraint firstItem="d9F-C0-rBO" firstAttribute="trailing" secondItem="Dgt-dx-A5X" secondAttribute="trailingMargin" id="ked-xu-NhK"/>
                             <constraint firstItem="iPS-MJ-zrB" firstAttribute="trailing" secondItem="Dgt-dx-A5X" secondAttribute="trailingMargin" id="kiO-JL-9tE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3h4-jB-06v" secondAttribute="trailing" id="lSf-A8-9Zf"/>
