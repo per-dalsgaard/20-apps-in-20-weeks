@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		6BD16DDFF7DCF4B2DCD4EF17 /* Pods_RainyShinyCloudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BB4E0305B7DC8702378045 /* Pods_RainyShinyCloudy.framework */; };
+		EC46FF6B1EA11880007A74AB /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46FF6A1EA11880007A74AB /* Forecast.swift */; };
+		EC46FF6D1EA16279007A74AB /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46FF6C1EA16279007A74AB /* WeatherTableViewCell.swift */; };
+		EC46FF6F1EA16D71007A74AB /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46FF6E1EA16D71007A74AB /* Location.swift */; };
 		EC4928D21EA023A0004E2339 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4928D11EA023A0004E2339 /* Constants.swift */; };
+		EC4928D41EA0F108004E2339 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4928D31EA0F108004E2339 /* CurrentWeather.swift */; };
 		ECEBE8881EA0068100AC6598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBE8871EA0068100AC6598 /* AppDelegate.swift */; };
 		ECEBE88A1EA0068100AC6598 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBE8891EA0068100AC6598 /* WeatherViewController.swift */; };
 		ECEBE88D1EA0068100AC6598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEBE88B1EA0068100AC6598 /* Main.storyboard */; };
@@ -20,7 +24,11 @@
 		7B285D1E19508080E0314E14 /* Pods-RainyShinyCloudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainyShinyCloudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RainyShinyCloudy/Pods-RainyShinyCloudy.debug.xcconfig"; sourceTree = "<group>"; };
 		93A26BC06A5A7A4C991B2966 /* Pods-RainyShinyCloudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainyShinyCloudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-RainyShinyCloudy/Pods-RainyShinyCloudy.release.xcconfig"; sourceTree = "<group>"; };
 		B8BB4E0305B7DC8702378045 /* Pods_RainyShinyCloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RainyShinyCloudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC46FF6A1EA11880007A74AB /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		EC46FF6C1EA16279007A74AB /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		EC46FF6E1EA16D71007A74AB /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		EC4928D11EA023A0004E2339 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EC4928D31EA0F108004E2339 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		ECEBE8841EA0068100AC6598 /* RainyShinyCloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainyShinyCloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEBE8871EA0068100AC6598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECEBE8891EA0068100AC6598 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +70,7 @@
 		EC4928CE1EA0234A004E2339 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ECEBE8891EA0068100AC6598 /* WeatherViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -69,6 +78,7 @@
 		EC4928CF1EA02350004E2339 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC46FF6C1EA16279007A74AB /* WeatherTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -76,6 +86,8 @@
 		EC4928D01EA02357004E2339 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC4928D31EA0F108004E2339 /* CurrentWeather.swift */,
+				EC46FF6A1EA11880007A74AB /* Forecast.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -105,12 +117,12 @@
 				EC4928CF1EA02350004E2339 /* View */,
 				EC4928CE1EA0234A004E2339 /* Controller */,
 				ECEBE8871EA0068100AC6598 /* AppDelegate.swift */,
-				ECEBE8891EA0068100AC6598 /* WeatherViewController.swift */,
 				ECEBE88B1EA0068100AC6598 /* Main.storyboard */,
 				ECEBE88E1EA0068100AC6598 /* Assets.xcassets */,
 				ECEBE8901EA0068100AC6598 /* LaunchScreen.storyboard */,
 				ECEBE8931EA0068100AC6598 /* Info.plist */,
 				EC4928D11EA023A0004E2339 /* Constants.swift */,
+				EC46FF6E1EA16D71007A74AB /* Location.swift */,
 			);
 			path = RainyShinyCloudy;
 			sourceTree = "<group>";
@@ -238,9 +250,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC46FF6D1EA16279007A74AB /* WeatherTableViewCell.swift in Sources */,
 				ECEBE88A1EA0068100AC6598 /* WeatherViewController.swift in Sources */,
 				ECEBE8881EA0068100AC6598 /* AppDelegate.swift in Sources */,
+				EC4928D41EA0F108004E2339 /* CurrentWeather.swift in Sources */,
 				EC4928D21EA023A0004E2339 /* Constants.swift in Sources */,
+				EC46FF6B1EA11880007A74AB /* Forecast.swift in Sources */,
+				EC46FF6F1EA16D71007A74AB /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
