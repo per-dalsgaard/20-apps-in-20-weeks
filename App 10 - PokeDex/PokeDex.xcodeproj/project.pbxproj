@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC7B5E601EA1FAA2008105E8 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = EC7B5E5F1EA1FAA2008105E8 /* pokemon.csv */; };
 		ECC707D61EA1F8F500AECD83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC707D51EA1F8F500AECD83 /* AppDelegate.swift */; };
 		ECC707D81EA1F8F500AECD83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC707D71EA1F8F500AECD83 /* ViewController.swift */; };
 		ECC707DB1EA1F8F500AECD83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC707D91EA1F8F500AECD83 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC7B5E5F1EA1FAA2008105E8 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		ECC707D21EA1F8F500AECD83 /* PokeDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC707D51EA1F8F500AECD83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC707D71EA1F8F500AECD83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				ECC707DC1EA1F8F500AECD83 /* Assets.xcassets */,
 				ECC707DE1EA1F8F500AECD83 /* LaunchScreen.storyboard */,
 				ECC707E11EA1F8F500AECD83 /* Info.plist */,
+				EC7B5E5F1EA1FAA2008105E8 /* pokemon.csv */,
 			);
 			path = PokeDex;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			files = (
 				ECC707E01EA1F8F500AECD83 /* LaunchScreen.storyboard in Resources */,
 				ECC707DD1EA1F8F500AECD83 /* Assets.xcassets in Resources */,
+				EC7B5E601EA1FAA2008105E8 /* pokemon.csv in Resources */,
 				ECC707DB1EA1F8F500AECD83 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +305,7 @@
 				ECC707E61EA1F8F500AECD83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
