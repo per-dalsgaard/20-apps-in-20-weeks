@@ -20,6 +20,7 @@
 		ECC707DB1EA1F8F500AECD83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC707D91EA1F8F500AECD83 /* Main.storyboard */; };
 		ECC707DD1EA1F8F500AECD83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC707DC1EA1F8F500AECD83 /* Assets.xcassets */; };
 		ECC707E01EA1F8F500AECD83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC707DE1EA1F8F500AECD83 /* LaunchScreen.storyboard */; };
+		ECD9348E1EA40FE600EFD2F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD9348D1EA40FE600EFD2F4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		ECC707DC1EA1F8F500AECD83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECC707DF1EA1F8F500AECD83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECC707E11EA1F8F500AECD83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD9348D1EA40FE600EFD2F4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				EC7B5E681EA2AD4C008105E8 /* csv.swift */,
+				ECD9348D1EA40FE600EFD2F4 /* Constants.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				ECC707D61EA1F8F500AECD83 /* AppDelegate.swift in Sources */,
 				EC7B5E671EA2221F008105E8 /* PokemonCollectionViewCell.swift in Sources */,
 				EC7B5E651EA1FB83008105E8 /* Pokemon.swift in Sources */,
+				ECD9348E1EA40FE600EFD2F4 /* Constants.swift in Sources */,
 				EC7B5E691EA2AD4C008105E8 /* csv.swift in Sources */,
 				EC7B5E711EA2BBFE008105E8 /* PokemonDetailViewController.swift in Sources */,
 			);

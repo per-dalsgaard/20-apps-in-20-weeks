@@ -98,7 +98,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             pokemon = pokemons[indexPath.row]
         }
         
-        performSegue(withIdentifier: "PokemonDetailViewContoller", sender: pokemon)
+        performSegue(withIdentifier: "PokemonDetailViewController", sender: pokemon)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
