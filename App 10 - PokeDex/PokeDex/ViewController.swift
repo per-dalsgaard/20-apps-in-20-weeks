@@ -24,7 +24,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         searchBar.returnKeyType = .done
         
-        initAudio()
+//        initAudio()
         parsePokemonCvs()
     }
     
