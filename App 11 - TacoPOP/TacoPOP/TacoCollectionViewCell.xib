@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TacoCollectionViewCell" customModule="TacoPOP" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TacoCollectionViewCell" id="gTV-IL-0wX" customClass="TacoCollectionViewCell" customModule="TacoPOP" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="168" height="178"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -24,7 +24,7 @@
                             <constraint firstAttribute="height" constant="142" id="A1w-zj-wYh"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brisket Taco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCu-b1-BRu">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brisket Taco" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="kCu-b1-BRu">
                         <rect key="frame" x="0.0" y="148" width="168" height="24"/>
                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                         <nil key="textColor"/>
@@ -42,6 +42,10 @@
                 <constraint firstItem="kCu-b1-BRu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hL1-T2-H4r"/>
             </constraints>
             <size key="customSize" width="169" height="166"/>
+            <connections>
+                <outlet property="tacoImage" destination="j5z-lm-H1t" id="Jl7-Jw-u8g"/>
+                <outlet property="tacoLabel" destination="kCu-b1-BRu" id="7eH-6P-c2D"/>
+            </connections>
             <point key="canvasLocation" x="93" y="151"/>
         </collectionViewCell>
     </objects>

@@ -64,6 +64,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="hs3-n4-yCp" id="i2G-Vj-w7Z"/>
                         <outlet property="headerView" destination="8z9-x2-1F4" id="Wtv-BJ-0qL"/>
                     </connections>
                 </viewController>

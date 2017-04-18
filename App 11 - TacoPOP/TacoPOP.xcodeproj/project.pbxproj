@@ -18,6 +18,11 @@
 		ECB64F5F1EA560640024D280 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB64F5E1EA560640024D280 /* DataService.swift */; };
 		ECB64F621EA5621A0024D280 /* TacoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB64F601EA5621A0024D280 /* TacoCollectionViewCell.swift */; };
 		ECB64F631EA5621A0024D280 /* TacoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECB64F611EA5621A0024D280 /* TacoCollectionViewCell.xib */; };
+		ECB64F651EA6A1580024D280 /* ReuseableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB64F641EA6A1580024D280 /* ReuseableView.swift */; };
+		ECB64F671EA6A1EE0024D280 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB64F661EA6A1EE0024D280 /* NibLoadableView.swift */; };
+		ECB64F691EA6A2770024D280 /* UICollectioView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB64F681EA6A2770024D280 /* UICollectioView+Ext.swift */; };
+		ECB64F6B1EA6A9A60024D280 /* MutableCollection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB64F6A1EA6A9A60024D280 /* MutableCollection+Ext.swift */; };
+		ECB64F6D1EA6AC850024D280 /* Shakeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB64F6C1EA6AC850024D280 /* Shakeable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		ECB64F5E1EA560640024D280 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		ECB64F601EA5621A0024D280 /* TacoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TacoCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECB64F611EA5621A0024D280 /* TacoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TacoCollectionViewCell.xib; sourceTree = "<group>"; };
+		ECB64F641EA6A1580024D280 /* ReuseableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReuseableView.swift; sourceTree = "<group>"; };
+		ECB64F661EA6A1EE0024D280 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		ECB64F681EA6A2770024D280 /* UICollectioView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectioView+Ext.swift"; sourceTree = "<group>"; };
+		ECB64F6A1EA6A9A60024D280 /* MutableCollection+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MutableCollection+Ext.swift"; sourceTree = "<group>"; };
+		ECB64F6C1EA6AC850024D280 /* Shakeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shakeable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				ECB64F581EA556AF0024D280 /* DropShadow.swift */,
+				ECB64F641EA6A1580024D280 /* ReuseableView.swift */,
+				ECB64F661EA6A1EE0024D280 /* NibLoadableView.swift */,
+				ECB64F6C1EA6AC850024D280 /* Shakeable.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -126,6 +139,8 @@
 		ECB64F551EA554450024D280 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ECB64F681EA6A2770024D280 /* UICollectioView+Ext.swift */,
+				ECB64F6A1EA6A9A60024D280 /* MutableCollection+Ext.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -204,11 +219,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC3D30DC1EA553C700B53265 /* AppDelegate.swift in Sources */,
+				ECB64F6B1EA6A9A60024D280 /* MutableCollection+Ext.swift in Sources */,
+				ECB64F651EA6A1580024D280 /* ReuseableView.swift in Sources */,
 				ECB64F621EA5621A0024D280 /* TacoCollectionViewCell.swift in Sources */,
+				ECB64F671EA6A1EE0024D280 /* NibLoadableView.swift in Sources */,
 				ECB64F591EA556AF0024D280 /* DropShadow.swift in Sources */,
+				ECB64F691EA6A2770024D280 /* UICollectioView+Ext.swift in Sources */,
 				ECB64F571EA554760024D280 /* MainViewController.swift in Sources */,
 				ECB64F5F1EA560640024D280 /* DataService.swift in Sources */,
 				ECB64F5D1EA5585D0024D280 /* Taco.swift in Sources */,
+				ECB64F6D1EA6AC850024D280 /* Shakeable.swift in Sources */,
 				ECB64F5B1EA557690024D280 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
