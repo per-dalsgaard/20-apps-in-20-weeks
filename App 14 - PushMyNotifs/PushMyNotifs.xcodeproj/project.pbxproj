@@ -27,6 +27,7 @@
 		EC4132511EA9408000430108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC4132541EA9408000430108 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC4132561EA9408000430108 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC65DAC31EA9532F0007A4E0 /* PushMyNotifs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushMyNotifs.entitlements; sourceTree = "<group>"; };
 		FF7238436936CD3F9F908729 /* Pods_PushMyNotifs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PushMyNotifs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +81,7 @@
 		EC4132491EA9408000430108 /* PushMyNotifs */ = {
 			isa = PBXGroup;
 			children = (
+				EC65DAC31EA9532F0007A4E0 /* PushMyNotifs.entitlements */,
 				EC41324A1EA9408000430108 /* AppDelegate.swift */,
 				EC41324C1EA9408000430108 /* ViewController.swift */,
 				EC41324E1EA9408000430108 /* Main.storyboard */,
@@ -126,7 +128,13 @@
 				TargetAttributes = {
 					EC4132461EA9408000430108 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = LFCTWR83LG;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -342,6 +350,8 @@
 			baseConfigurationReference = 086226977E7B3FC59BB97565 /* Pods-PushMyNotifs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushMyNotifs/PushMyNotifs.entitlements;
+				DEVELOPMENT_TEAM = LFCTWR83LG;
 				INFOPLIST_FILE = PushMyNotifs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.codeph.PushMyNotifs;
@@ -355,6 +365,8 @@
 			baseConfigurationReference = 543469C019626B676B347B6E /* Pods-PushMyNotifs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PushMyNotifs/PushMyNotifs.entitlements;
+				DEVELOPMENT_TEAM = LFCTWR83LG;
 				INFOPLIST_FILE = PushMyNotifs/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dk.codeph.PushMyNotifs;
