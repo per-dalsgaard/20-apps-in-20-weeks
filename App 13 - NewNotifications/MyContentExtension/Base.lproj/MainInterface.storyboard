@@ -18,27 +18,32 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="316" height="316"/>
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yX2-1p-W7V">
-                                <rect key="frame" x="8" y="8" width="300" height="300"/>
+                                <rect key="frame" x="8" y="8" width="684" height="684"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="3kM-eI-Afn"/>
-                                    <constraint firstAttribute="width" constant="300" id="ZDJ-Ef-mUJ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="3kM-eI-Afn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="ZDJ-Ef-mUJ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbW-my-yc3">
-                                <rect key="frame" x="245" y="268" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👊🏼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbW-my-yc3">
+                                <rect key="frame" x="621" y="608" width="79" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="EHn-gD-3u3"/>
+                                    <constraint firstAttribute="height" constant="92" id="n92-fF-gq2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="62"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vbW-my-yc3" secondAttribute="trailing" id="7yE-DH-Eby"/>
                             <constraint firstAttribute="trailing" secondItem="yX2-1p-W7V" secondAttribute="trailing" constant="8" id="Qyt-qM-Faf"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="vbW-my-yc3" secondAttribute="bottom" id="Y06-MX-9xg"/>
                             <constraint firstItem="yX2-1p-W7V" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="lpA-o3-c6h"/>
                             <constraint firstItem="yX2-1p-W7V" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="8" id="mPF-df-BB4"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="yX2-1p-W7V" secondAttribute="bottom" constant="8" id="x28-ce-f72"/>
@@ -49,10 +54,14 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="316" height="316"/>
+                    <size key="freeformSize" width="700" height="700"/>
+                    <connections>
+                        <outlet property="imageView" destination="yX2-1p-W7V" id="oc2-jN-u7o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="101.64917541229386"/>
         </scene>
     </scenes>
 </document>
