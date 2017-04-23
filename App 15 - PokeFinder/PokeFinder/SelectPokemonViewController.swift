@@ -42,6 +42,11 @@ class SelectPokemonViewController: UIViewController, UICollectionViewDataSource,
         return UICollectionViewCell()
     }
     
+    // MARK: - IBActions
+    
+    @IBAction func dismissViewPressed(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     // MARK: - UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

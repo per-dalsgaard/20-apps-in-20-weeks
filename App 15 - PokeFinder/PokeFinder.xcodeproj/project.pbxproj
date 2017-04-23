@@ -20,6 +20,7 @@
 		ECE344991EAAA6A2003EFCAD /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE344931EAAA6A2003EFCAD /* GFGeoHashQuery.m */; };
 		ECE3449A1EAAA6A2003EFCAD /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE344951EAAA6A2003EFCAD /* GFQuery.m */; };
 		ECE4BCA51EAAA2B000915BF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECE4BCA41EAAA2B000915BF4 /* GoogleService-Info.plist */; };
+		ECEB4E231EACE2D3009B5CDB /* RoundedCornersImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB4E221EACE2D3009B5CDB /* RoundedCornersImageView.swift */; };
 		ECECA5501EABFC5300D85AED /* SelectPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECECA54F1EABFC5200D85AED /* SelectPokemonViewController.swift */; };
 		ECECA5521EABFE7900D85AED /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECECA5511EABFE7900D85AED /* PokemonCollectionViewCell.swift */; };
 		ECECA5541EABFEFA00D85AED /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECECA5531EABFEFA00D85AED /* Pokemon.swift */; };
@@ -55,6 +56,7 @@
 		ECE344941EAAA6A2003EFCAD /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
 		ECE344951EAAA6A2003EFCAD /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		ECE4BCA41EAAA2B000915BF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ECEB4E221EACE2D3009B5CDB /* RoundedCornersImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersImageView.swift; sourceTree = "<group>"; };
 		ECECA54F1EABFC5200D85AED /* SelectPokemonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPokemonViewController.swift; sourceTree = "<group>"; };
 		ECECA5511EABFE7900D85AED /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECECA5531EABFEFA00D85AED /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				ECECA5511EABFE7900D85AED /* PokemonCollectionViewCell.swift */,
+				ECEB4E221EACE2D3009B5CDB /* RoundedCornersImageView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				EC755CF61EAAA244001638E2 /* ViewController.swift in Sources */,
 				ECE344981EAAA6A2003EFCAD /* GFGeoHash.m in Sources */,
 				EC755CF41EAAA244001638E2 /* AppDelegate.swift in Sources */,
+				ECEB4E231EACE2D3009B5CDB /* RoundedCornersImageView.swift in Sources */,
 				ECECA5541EABFEFA00D85AED /* Pokemon.swift in Sources */,
 				ECE344961EAAA6A2003EFCAD /* GeoFire.m in Sources */,
 				ECE344991EAAA6A2003EFCAD /* GFGeoHashQuery.m in Sources */,
