@@ -122,10 +122,23 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
-    @IBAction func spotRandomPokemon(_ sender: UIButton) {
-        let location = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-        let rand = arc4random_uniform(150) + 1
-        createSighting(forLocation: location, withPokemon: Int(rand))
+    // MARK: - IBActions
+    
+    @IBAction func spotPokemon(_ sender: UIButton) {
+        performSegue(withIdentifier: "SelectPokemonViewController", sender: nil)
+    }
+
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectPokemonViewController" {
+            if let destination = segue.destination as? SelectPokemonViewController {
+                destination.completed = { (pokeId) in
+                    let location = CLLocation(latitude: self.mapView.centerCoordinate.latitude, longitude: self.mapView.centerCoordinate.longitude)
+                    self.createSighting(forLocation: location, withPokemon: pokeId)
+                }
+            }
+        }
     }
 
 }

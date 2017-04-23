@@ -37,7 +37,7 @@ class Pokemon {
         var pokemons = [Pokemon]()
         for (index, _) in POKEMONS.enumerated() {
             let pokemon = Pokemon()
-            pokemon.number = index
+            pokemon.number = index + 1
             pokemons.append(pokemon)
         }
         return pokemons

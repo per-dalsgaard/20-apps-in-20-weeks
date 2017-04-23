@@ -15,6 +15,6 @@ class PokemonCollectionViewCell: UICollectionViewCell {
     
     func configureCell(pokemon: Pokemon) {
         nameLabel.text = pokemon.name
-        thumbImageView.image = UIImage(named: pokemon.name)
+        thumbImageView.image = UIImage(named: "\(pokemon.number)")
     }
 }
