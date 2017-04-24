@@ -10,7 +10,7 @@
 		133E699F538429EEE22710FE /* Pods_Devslopes_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D550CE7CBDE1C538AF83EE /* Pods_Devslopes_Social.framework */; };
 		EC9F398B1EAE86F500115210 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC9F398A1EAE86F500115210 /* GoogleService-Info.plist */; };
 		ECD8DAB61EAE867400CCCF80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8DAB51EAE867400CCCF80 /* AppDelegate.swift */; };
-		ECD8DAB81EAE867400CCCF80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8DAB71EAE867400CCCF80 /* ViewController.swift */; };
+		ECD8DAB81EAE867400CCCF80 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8DAB71EAE867400CCCF80 /* SignInViewController.swift */; };
 		ECD8DABB1EAE867400CCCF80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD8DAB91EAE867400CCCF80 /* Main.storyboard */; };
 		ECD8DABD1EAE867400CCCF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD8DABC1EAE867400CCCF80 /* Assets.xcassets */; };
 		ECD8DAC01EAE867400CCCF80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD8DABE1EAE867400CCCF80 /* LaunchScreen.storyboard */; };
@@ -23,7 +23,7 @@
 		EC9F398A1EAE86F500115210 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECD8DAB21EAE867400CCCF80 /* Devslopes Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Devslopes Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD8DAB51EAE867400CCCF80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECD8DAB71EAE867400CCCF80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECD8DAB71EAE867400CCCF80 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		ECD8DABA1EAE867400CCCF80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECD8DABC1EAE867400CCCF80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECD8DABF1EAE867400CCCF80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +59,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EC99DE301EAE89D700075BA1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECD8DAB71EAE867400CCCF80 /* SignInViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EC99DE311EAE89DB00075BA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EC99DE321EAE89DC00075BA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		ECD8DAA91EAE867400CCCF80 = {
 			isa = PBXGroup;
 			children = (
@@ -80,11 +102,13 @@
 		ECD8DAB41EAE867400CCCF80 /* Devslopes Social */ = {
 			isa = PBXGroup;
 			children = (
+				EC99DE321EAE89DC00075BA1 /* Model */,
+				EC99DE311EAE89DB00075BA1 /* View */,
+				EC99DE301EAE89D700075BA1 /* Controller */,
 				ECD8DAB51EAE867400CCCF80 /* AppDelegate.swift */,
-				ECD8DAB71EAE867400CCCF80 /* ViewController.swift */,
+				ECD8DABE1EAE867400CCCF80 /* LaunchScreen.storyboard */,
 				ECD8DAB91EAE867400CCCF80 /* Main.storyboard */,
 				ECD8DABC1EAE867400CCCF80 /* Assets.xcassets */,
-				ECD8DABE1EAE867400CCCF80 /* LaunchScreen.storyboard */,
 				ECD8DAC11EAE867400CCCF80 /* Info.plist */,
 				EC9F398A1EAE86F500115210 /* GoogleService-Info.plist */,
 			);
@@ -215,7 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD8DAB81EAE867400CCCF80 /* ViewController.swift in Sources */,
+				ECD8DAB81EAE867400CCCF80 /* SignInViewController.swift in Sources */,
 				ECD8DAB61EAE867400CCCF80 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
