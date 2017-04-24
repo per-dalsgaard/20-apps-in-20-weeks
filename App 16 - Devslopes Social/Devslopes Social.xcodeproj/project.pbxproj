@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		133E699F538429EEE22710FE /* Pods_Devslopes_Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D550CE7CBDE1C538AF83EE /* Pods_Devslopes_Social.framework */; };
+		EC99DE351EAE983700075BA1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99DE341EAE983700075BA1 /* Constants.swift */; };
+		EC99DE371EAE988100075BA1 /* DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99DE361EAE988100075BA1 /* DropShadowView.swift */; };
+		EC99DE391EAE9A2000075BA1 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99DE381EAE9A2000075BA1 /* RoundButton.swift */; };
+		EC99DE3E1EAE9D7400075BA1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99DE3D1EAE9D7400075BA1 /* CustomTextField.swift */; };
+		EC99DE421EAE9E8E00075BA1 /* RoundCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99DE411EAE9E8E00075BA1 /* RoundCornersButton.swift */; };
 		EC9F398B1EAE86F500115210 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC9F398A1EAE86F500115210 /* GoogleService-Info.plist */; };
 		ECD8DAB61EAE867400CCCF80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8DAB51EAE867400CCCF80 /* AppDelegate.swift */; };
 		ECD8DAB81EAE867400CCCF80 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8DAB71EAE867400CCCF80 /* SignInViewController.swift */; };
@@ -20,6 +25,11 @@
 		2EBF26560429F5EB71631EB4 /* Pods-Devslopes Social.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Devslopes Social.release.xcconfig"; path = "Pods/Target Support Files/Pods-Devslopes Social/Pods-Devslopes Social.release.xcconfig"; sourceTree = "<group>"; };
 		4368FF252A16DF7F638A3E37 /* Pods-Devslopes Social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Devslopes Social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Devslopes Social/Pods-Devslopes Social.debug.xcconfig"; sourceTree = "<group>"; };
 		46D550CE7CBDE1C538AF83EE /* Pods_Devslopes_Social.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Devslopes_Social.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC99DE341EAE983700075BA1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EC99DE361EAE988100075BA1 /* DropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadowView.swift; sourceTree = "<group>"; };
+		EC99DE381EAE9A2000075BA1 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		EC99DE3D1EAE9D7400075BA1 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EC99DE411EAE9E8E00075BA1 /* RoundCornersButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundCornersButton.swift; sourceTree = "<group>"; };
 		EC9F398A1EAE86F500115210 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECD8DAB21EAE867400CCCF80 /* Devslopes Social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Devslopes Social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD8DAB51EAE867400CCCF80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +80,10 @@
 		EC99DE311EAE89DB00075BA1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC99DE361EAE988100075BA1 /* DropShadowView.swift */,
+				EC99DE381EAE9A2000075BA1 /* RoundButton.swift */,
+				EC99DE3D1EAE9D7400075BA1 /* CustomTextField.swift */,
+				EC99DE411EAE9E8E00075BA1 /* RoundCornersButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -79,6 +93,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		EC99DE331EAE97BB00075BA1 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EC99DE341EAE983700075BA1 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		ECD8DAA91EAE867400CCCF80 = {
@@ -105,6 +127,7 @@
 				EC99DE321EAE89DC00075BA1 /* Model */,
 				EC99DE311EAE89DB00075BA1 /* View */,
 				EC99DE301EAE89D700075BA1 /* Controller */,
+				EC99DE331EAE97BB00075BA1 /* Util */,
 				ECD8DAB51EAE867400CCCF80 /* AppDelegate.swift */,
 				ECD8DABE1EAE867400CCCF80 /* LaunchScreen.storyboard */,
 				ECD8DAB91EAE867400CCCF80 /* Main.storyboard */,
@@ -240,7 +263,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECD8DAB81EAE867400CCCF80 /* SignInViewController.swift in Sources */,
+				EC99DE421EAE9E8E00075BA1 /* RoundCornersButton.swift in Sources */,
+				EC99DE391EAE9A2000075BA1 /* RoundButton.swift in Sources */,
+				EC99DE3E1EAE9D7400075BA1 /* CustomTextField.swift in Sources */,
+				EC99DE371EAE988100075BA1 /* DropShadowView.swift in Sources */,
 				ECD8DAB61EAE867400CCCF80 /* AppDelegate.swift in Sources */,
+				EC99DE351EAE983700075BA1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
