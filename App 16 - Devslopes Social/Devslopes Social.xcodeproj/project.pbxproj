@@ -11,6 +11,8 @@
 		EC89F96F1EAFF26C0025F6CD /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89F96E1EAFF26C0025F6CD /* FeedViewController.swift */; };
 		EC89F9711EB12F370025F6CD /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89F9701EB12F370025F6CD /* RoundImageView.swift */; };
 		EC89F9731EB138AE0025F6CD /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89F9721EB138AE0025F6CD /* PostTableViewCell.swift */; };
+		EC89F9761EB276070025F6CD /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89F9751EB276070025F6CD /* DataService.swift */; };
+		EC89F9781EB28BB20025F6CD /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC89F9771EB28BB20025F6CD /* Post.swift */; };
 		EC99DE351EAE983700075BA1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99DE341EAE983700075BA1 /* Constants.swift */; };
 		EC99DE371EAE988100075BA1 /* DropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99DE361EAE988100075BA1 /* DropShadowView.swift */; };
 		EC99DE391EAE9A2000075BA1 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC99DE381EAE9A2000075BA1 /* RoundButton.swift */; };
@@ -31,6 +33,8 @@
 		EC89F96E1EAFF26C0025F6CD /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		EC89F9701EB12F370025F6CD /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		EC89F9721EB138AE0025F6CD /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		EC89F9751EB276070025F6CD /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		EC89F9771EB28BB20025F6CD /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EC99DE341EAE983700075BA1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EC99DE361EAE988100075BA1 /* DropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropShadowView.swift; sourceTree = "<group>"; };
 		EC99DE381EAE9A2000075BA1 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		EC89F9741EB264A30025F6CD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EC89F9751EB276070025F6CD /* DataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 		EC99DE321EAE89DC00075BA1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC89F9771EB28BB20025F6CD /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -282,8 +288,10 @@
 				ECD8DAB81EAE867400CCCF80 /* SignInViewController.swift in Sources */,
 				EC99DE421EAE9E8E00075BA1 /* RoundCornersButton.swift in Sources */,
 				EC99DE391EAE9A2000075BA1 /* RoundButton.swift in Sources */,
+				EC89F9781EB28BB20025F6CD /* Post.swift in Sources */,
 				EC99DE3E1EAE9D7400075BA1 /* CustomTextField.swift in Sources */,
 				EC99DE371EAE988100075BA1 /* DropShadowView.swift in Sources */,
+				EC89F9761EB276070025F6CD /* DataService.swift in Sources */,
 				ECD8DAB61EAE867400CCCF80 /* AppDelegate.swift in Sources */,
 				EC89F96F1EAFF26C0025F6CD /* FeedViewController.swift in Sources */,
 				EC89F9731EB138AE0025F6CD /* PostTableViewCell.swift in Sources */,

@@ -15,5 +15,10 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var captionTextView: UITextView!
     @IBOutlet weak var likesLabel: UILabel!
+    
+    func configureCell(post: Post) {
+        captionTextView.text = post.caption
+        likesLabel.text = "\(post.likes)"
+    }
 
 }
