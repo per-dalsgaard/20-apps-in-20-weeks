@@ -30,12 +30,15 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
         
         DataSerice.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+            self.posts = []
+            
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
                     if let postDataDict = snap.value as? Dictionary<String, AnyObject> {
                         let postId = snap.key
                         let post = Post(postId: postId, postData: postDataDict)
-                        self.posts.append(post)
+                        self.posts.insert(post, at: 0)
                     }
                 }
             }
@@ -105,9 +108,25 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 } else {
                     print("Successfully uploaded image")
                     let postImageUrl = metadata?.downloadURL()?.absoluteString
-                    print(postImageUrl)
+                    self.addPostToFirebase(postImageUrl: postImageUrl!)
                 }
             })
         }
+    }
+    
+    // MARK: - Miscellaneous
+    
+    func addPostToFirebase(postImageUrl: String) {
+        let postData: Dictionary<String, AnyObject> = [
+            "caption": captionTextField.text as AnyObject,
+            "imageUrl": postImageUrl as AnyObject,
+            "likes": 0 as AnyObject
+        ]
+        
+        let firebasePost = DataSerice.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(postData)
+        
+        postImageButton.setImage(UIImage(named:"add-image"), for: .normal)
+        captionTextField.text = ""
     }
 }
