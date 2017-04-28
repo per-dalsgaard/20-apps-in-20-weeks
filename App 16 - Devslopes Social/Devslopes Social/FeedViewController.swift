@@ -13,6 +13,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var postImageButton: RoundButton!
+    @IBOutlet weak var captionTextField: UITextField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
@@ -83,5 +84,30 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         present(imagePicker, animated: true, completion: nil)
     }
     
-    
+    @IBAction func postButtonPressed(_ sender: UIButton) {
+        guard let caption = captionTextField.text , caption != "" else {
+            print("Caption must be entered")
+            return
+        }
+        
+        guard let postImage = postImageButton.image(for: .normal) , postImageButton.currentImage != UIImage(named: "add-image") else {
+            print("An image must be selected")
+            return
+        }
+        
+        if let postImageData = UIImageJPEGRepresentation(postImage, 0.2) {
+            let imageUid = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            DataSerice.ds.REF_POST_IMAGES.child(imageUid).put(postImageData, metadata: metadata, completion: { (metadata, error) in
+                if error != nil {
+                    print("Unable to upload image to Firebase storage")
+                } else {
+                    print("Successfully uploaded image")
+                    let postImageUrl = metadata?.downloadURL()?.absoluteString
+                    print(postImageUrl)
+                }
+            })
+        }
+    }
 }
