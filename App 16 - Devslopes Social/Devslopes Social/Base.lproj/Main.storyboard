@@ -186,6 +186,9 @@
                                                     <constraint firstAttribute="height" constant="49" id="lYl-vg-3ZE"/>
                                                 </constraints>
                                                 <state key="normal" image="add-image"/>
+                                                <connections>
+                                                    <action selector="addImageButtonPressed:" destination="W3y-cm-V1d" eventType="touchUpInside" id="WGo-f9-55O"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4Y-NR-KXH" customClass="CustomTextField" customModule="Devslopes_Social" customModuleProvider="target">
                                                 <rect key="frame" x="59" y="0.0" width="209" height="49"/>
@@ -340,6 +343,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="postImageButton" destination="xlY-mr-lZ9" id="NgT-ii-Wdv"/>
                         <outlet property="tableView" destination="YgF-mL-upk" id="ggS-Ad-PSZ"/>
                     </connections>
                 </viewController>

@@ -9,14 +9,20 @@
 import UIKit
 import Firebase
 
-class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var postImageButton: RoundButton!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -58,5 +64,21 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAtIndexPath")
     }
+    
+    // MARK: - UIImagePickerControllerDelegate
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            postImageButton.setImage(image, for: .normal)
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func addImageButtonPressed(_ sender: UIButton) {
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     
 }
