@@ -16,8 +16,16 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var captionTextView: UITextView!
     @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var likesButton: UIButton!
+    
+    var post: Post!
+    var likesRef: FIRDatabaseReference!
+
     
     func configureCell(post: Post, postImage: UIImage?) {
+        likesRef = DataSerice.ds.REF_CURRENT_USER.child("likes").child(post.postId)
+
+        self.post = post
         captionTextView.text = post.caption
         likesLabel.text = "\(post.likes)"
         
@@ -39,5 +47,28 @@ class PostTableViewCell: UITableViewCell {
                 }
             })
         }
+        
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull {
+                self.likesButton.setImage(UIImage(named: "empty-heart")!, for: .normal)
+            } else {
+                self.likesButton.setImage (UIImage(named: "filled-heart")!, for: .normal)
+            }
+        })
+    }
+    
+    @IBAction func likeButtonPressed(sender: UIButton) {
+        likesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let _ = snapshot.value as? NSNull {
+                self.likesButton.setImage(UIImage(named: "filled-heart"), for: .normal)
+                self.post.adjustLikes(addLike: true)
+                self.likesRef.setValue(true)
+            } else {
+                self.likesButton.setImage (UIImage(named: "empty-heart"), for: .normal)
+                self.post.adjustLikes(addLike: false)
+                self.likesRef.removeValue()
+
+            }
+        })
     }
 }

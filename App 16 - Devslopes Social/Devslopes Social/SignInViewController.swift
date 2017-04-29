@@ -17,6 +17,10 @@ class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // TODO: Remove before production
+        emailTextField.text = "per@codeph.dk"
+        passwordTextField.text = "Hej12sa"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,7 +39,7 @@ class SignInViewController: UIViewController {
                 if error == nil {
                     print("PDK: Email user authenticated with Firebase")
                     if let user = user {
-                        self.completeSignIn(uid: user.uid, userData: ["test":"hello"])
+                        self.completeSignIn(uid: user.uid, userData: ["provider":"Firebase"])
                     }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
@@ -44,7 +48,7 @@ class SignInViewController: UIViewController {
                         } else {
                             print("PDK: New email user created")
                             if let user = user {
-                                self.completeSignIn(uid: user.uid, userData: ["Nasda":"asdA"])
+                                self.completeSignIn(uid: user.uid, userData: ["provider":"Firebase"])
                             }
                         }
                     })

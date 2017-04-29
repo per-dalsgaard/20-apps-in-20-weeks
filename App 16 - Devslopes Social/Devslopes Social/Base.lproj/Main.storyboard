@@ -253,13 +253,17 @@
                                                                             <color key="textColor" red="0.86666666670000003" green="0.17254901959999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-heart" translatesAutoresizingMaskIntoConstraints="NO" id="Mov-Rm-GVN">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJd-ce-qTO">
                                                                             <rect key="frame" x="267" y="0.0" width="60" height="60"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="60" id="6XK-0W-avd"/>
-                                                                                <constraint firstAttribute="height" constant="60" id="pig-BM-INw"/>
+                                                                                <constraint firstAttribute="width" constant="60" id="Qpt-TQ-TQj"/>
+                                                                                <constraint firstAttribute="height" constant="60" id="swf-QM-38L"/>
                                                                             </constraints>
-                                                                        </imageView>
+                                                                            <state key="normal" image="empty-heart"/>
+                                                                            <connections>
+                                                                                <action selector="likeButtonPressedWithSender:" destination="x3i-f4-hR6" eventType="touchUpInside" id="ZXe-65-oPr"/>
+                                                                            </connections>
+                                                                        </button>
                                                                     </subviews>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="60" id="Avq-Nn-tkd"/>
@@ -322,6 +326,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="captionTextView" destination="Cgl-wL-efh" id="Das-yE-CIB"/>
+                                            <outlet property="likesButton" destination="EJd-ce-qTO" id="gJ5-tW-UfW"/>
                                             <outlet property="likesLabel" destination="LEh-Sf-n82" id="Zsg-A9-esa"/>
                                             <outlet property="postImageView" destination="108-4e-Ra3" id="N7I-ut-hJI"/>
                                             <outlet property="profileImageView" destination="Jl4-NJ-0fh" id="7v2-Lc-lcC"/>
