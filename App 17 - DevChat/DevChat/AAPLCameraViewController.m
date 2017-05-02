@@ -11,7 +11,7 @@ View controller for camera interface.
 
 #import "AAPLCameraViewController.h"
 #import "AAPLPreviewView.h"
-#import "AAPLCameraVCDelegate.h"
+#import "AAPLCameraViewControllerDelegate.h"
 
 static void * CapturingStillImageContext = &CapturingStillImageContext;
 static void * SessionRunningContext = &SessionRunningContext;
@@ -22,7 +22,7 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 	AVCamSetupResultSessionConfigurationFailed
 };
 
-@interface AAPLCameraViewController () <AVCaptureFileOutputRecordingDelegate>
+@interface AAPLCameraViewController () <AVCaptureFileOutputRecordingDelegate >
 
 // For use in the storyboards.
 @property (nonatomic, weak) IBOutlet UILabel *cameraUnavailableLabel;

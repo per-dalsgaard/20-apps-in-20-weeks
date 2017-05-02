@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,11 +19,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBi-t5-tMp" customClass="AAPLPreviewView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAL-qZ-c5a">
+                                <rect key="frame" x="157.5" y="599" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Gwr-RX-o3W"/>
+                                    <constraint firstAttribute="height" constant="60" id="uy0-Ca-yQD"/>
+                                </constraints>
+                                <state key="normal" image="createsnap_btn"/>
+                                <connections>
+                                    <action selector="recordButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T81-u3-Pmm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBi-re-oDV">
+                                <rect key="frame" x="307" y="28" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KH0-4S-brh"/>
+                                    <constraint firstAttribute="width" constant="60" id="NIS-dq-kHA"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                                <connections>
+                                    <action selector="changeCameraButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jle-bx-PjG"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OBi-t5-tMp" secondAttribute="trailing" id="79Q-TC-TWH"/>
+                            <constraint firstItem="OBi-t5-tMp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7ZA-9n-P3j"/>
+                            <constraint firstAttribute="trailing" secondItem="iBi-re-oDV" secondAttribute="trailing" constant="8" id="8Mk-wE-UMn"/>
+                            <constraint firstItem="iBi-re-oDV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="AbM-wa-9Ae"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sAL-qZ-c5a" secondAttribute="bottom" constant="8" id="JlX-5w-BUa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OBi-t5-tMp" secondAttribute="bottom" id="lEe-wQ-MYJ"/>
+                            <constraint firstItem="sAL-qZ-c5a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pL9-62-4JJ"/>
+                            <constraint firstItem="OBi-t5-tMp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sw4-HL-rAU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="iBi-re-oDV" id="ts8-Jt-GuP"/>
+                        <outlet property="previewView" destination="OBi-t5-tMp" id="Xg6-k7-WLZ"/>
+                        <outlet property="recordButton" destination="sAL-qZ-c5a" id="PkK-PD-cM2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera_icon_snap" width="29" height="24"/>
+        <image name="createsnap_btn" width="30" height="30"/>
+    </resources>
 </document>

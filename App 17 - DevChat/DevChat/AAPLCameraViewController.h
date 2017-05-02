@@ -6,17 +6,17 @@ Abstract:
 View controller for camera interface.
 */
 
+#import "AAPLCameraViewControllerDelegate.h"
 
 @import UIKit;
 @class AAPLPreviewView;
-@protocol AAPLCameraVCDelegate;
+@protocol AAPLCameraViewControllerDelegate;
 
 @interface AAPLCameraViewController : UIViewController
 @property (nonatomic, weak) AAPLPreviewView *_previewView;
-@property (retain) id <AAPLCameraVCDelegate> delegate;
+@property (retain) id <AAPLCameraViewControllerDelegate> delegate;
 
 - (void)changeCamera;
 - (void)toggleMovieRecording;
-
 
 @end

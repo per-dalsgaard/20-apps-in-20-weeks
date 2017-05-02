@@ -8,18 +8,57 @@
 
 import UIKit
 
-class CameraViewController: UIViewController {
+class CameraViewController: AAPLCameraViewController, AAPLCameraViewControllerDelegate {
 
+    @IBOutlet weak var previewView: AAPLPreviewView!
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var recordButton: UIButton!
+    
     override func viewDidLoad() {
+        super.delegate = self
+
+        super._previewView = previewView
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func recordButtonPressed(sender: UIButton) {
+        toggleMovieRecording()
     }
-
-
+    
+    @IBAction func changeCameraButtonPressed(sender: UIButton) {
+        changeCamera()
+    }
+    
+    func shouldEnableRecordUI(_ enable: Bool) {
+        recordButton.isEnabled = enable
+    }
+    
+    func shouldEnableCameraUI(_ enable: Bool) {
+        cameraButton.isEnabled = enable
+    }
+    
+    func canStartRecording() {
+        
+    }
+    
+    func recordingHasStarted() {
+        
+    }
+    
+    func videoRecordingComplete(_ videoURL: URL!) {
+        
+    }
+    
+    func videoRecordingFailed() {
+        
+    }
+    
+    func snapshotTaken(_ snapshotData: Data!) {
+        
+    }
+    
+    func snapshotFailed() {
+        
+    }
 }
 
