@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="oIF-e8-gY6">
             <objects>
-                <viewController id="pPN-mZ-A7E" sceneMemberID="viewController">
+                <viewController id="pPN-mZ-A7E" customClass="LogInViewController" customModule="DevChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zke-hE-u8V"/>
                         <viewControllerLayoutGuide type="bottom" id="xoB-bC-yid"/>
@@ -197,6 +197,7 @@
                         <outlet property="cameraButton" destination="iBi-re-oDV" id="ts8-Jt-GuP"/>
                         <outlet property="previewView" destination="OBi-t5-tMp" id="Xg6-k7-WLZ"/>
                         <outlet property="recordButton" destination="sAL-qZ-c5a" id="PkK-PD-cM2"/>
+                        <segue destination="pPN-mZ-A7E" kind="presentation" identifier="LogInViewController" id="UjK-wT-ClV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
