@@ -35,6 +35,7 @@ class AuthService {
                             } else {
                                 
                                 if user?.uid != nil {
+                                    DataService.instance.saveUser(uid: user!.uid)
                                     FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                                         if error != nil {
                                             self.handleFirebaseError(error: error! as NSError, onComplete: onComplete)
@@ -64,7 +65,7 @@ class AuthService {
             case .errorCodeInvalidEmail:
                 onComplete?("Invalid email address", nil)
             case .errorCodeWeakPassword:
-                onComplete?("Password should be at least 6 characteres")
+                onComplete?("Password should be at least 6 characteres", nil)
             case .errorCodeWrongPassword:
                 onComplete?("Invalid password", nil)
             case .errorCodeEmailAlreadyInUse, .errorCodeAccountExistsWithDifferentCredential:
