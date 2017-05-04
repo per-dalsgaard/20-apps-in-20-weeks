@@ -14,6 +14,9 @@
 		EC48D37A1EB7DF3C008B4203 /* AAPLPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC48D3781EB7DF3C008B4203 /* AAPLPreviewView.m */; };
 		EC48D3821EB89DED008B4203 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC48D3811EB89DED008B4203 /* GoogleService-Info.plist */; };
 		EC82CDBB1EBA7CCB00555515 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC82CDBA1EBA7CCB00555515 /* DataService.swift */; };
+		EC82CDBD1EBB92B200555515 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC82CDBC1EBB92B200555515 /* UserTableViewCell.swift */; };
+		EC82CDBF1EBB92BD00555515 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC82CDBE1EBB92BD00555515 /* UsersViewController.swift */; };
+		EC82CDC11EBBC8EF00555515 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC82CDC01EBBC8EF00555515 /* User.swift */; };
 		ECE0CFC51EB91E1100AC0836 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0CFC41EB91E1100AC0836 /* LogInViewController.swift */; };
 		ECE0CFC81EB9225B00AC0836 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE0CFC71EB9225B00AC0836 /* AuthService.swift */; };
 		ECF99A641EB7DB7400C250E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF99A631EB7DB7400C250E6 /* AppDelegate.swift */; };
@@ -37,6 +40,9 @@
 		EC48D37F1EB89685008B4203 /* AAPLCameraViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraViewControllerDelegate.h; sourceTree = "<group>"; };
 		EC48D3811EB89DED008B4203 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC82CDBA1EBA7CCB00555515 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		EC82CDBC1EBB92B200555515 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		EC82CDBE1EBB92BD00555515 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		EC82CDC01EBBC8EF00555515 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECE0CFC41EB91E1100AC0836 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		ECE0CFC71EB9225B00AC0836 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		ECF99A601EB7DB7400C250E6 /* DevChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +96,7 @@
 			children = (
 				ECE0CFC41EB91E1100AC0836 /* LogInViewController.swift */,
 				ECF99A651EB7DB7400C250E6 /* CameraViewController.swift */,
+				EC82CDBE1EBB92BD00555515 /* UsersViewController.swift */,
 				EC48D3751EB7DF3C008B4203 /* AAPLCameraViewController.h */,
 				EC48D3761EB7DF3C008B4203 /* AAPLCameraViewController.m */,
 			);
@@ -103,6 +110,7 @@
 				EC48D3781EB7DF3C008B4203 /* AAPLPreviewView.m */,
 				EC0D3E4A1EB915A7004E90E2 /* RoundTextField.swift */,
 				EC0D3E4C1EB91B44004E90E2 /* RoundButton.swift */,
+				EC82CDBC1EBB92B200555515 /* UserTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -110,6 +118,7 @@
 		EC9B28A51EB7DBEC00EB40A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC82CDC01EBBC8EF00555515 /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -289,9 +298,12 @@
 				EC82CDBB1EBA7CCB00555515 /* DataService.swift in Sources */,
 				EC0D3E4D1EB91B44004E90E2 /* RoundButton.swift in Sources */,
 				ECF99A661EB7DB7400C250E6 /* CameraViewController.swift in Sources */,
+				EC82CDBF1EBB92BD00555515 /* UsersViewController.swift in Sources */,
 				ECF99A641EB7DB7400C250E6 /* AppDelegate.swift in Sources */,
+				EC82CDBD1EBB92B200555515 /* UserTableViewCell.swift in Sources */,
 				ECE0CFC51EB91E1100AC0836 /* LogInViewController.swift in Sources */,
 				EC0D3E4B1EB915A7004E90E2 /* RoundTextField.swift in Sources */,
+				EC82CDC11EBBC8EF00555515 /* User.swift in Sources */,
 				EC48D3791EB7DF3C008B4203 /* AAPLCameraViewController.m in Sources */,
 				EC48D37A1EB7DF3C008B4203 /* AAPLPreviewView.m in Sources */,
 				ECE0CFC81EB9225B00AC0836 /* AuthService.swift in Sources */,

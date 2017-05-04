@@ -9,6 +9,8 @@
 import Foundation
 import Firebase
 
+let FIR_CHILD_USERS = "users"
+
 class DataService {
     
     private static let _instance = DataService()
@@ -21,8 +23,12 @@ class DataService {
         return FIRDatabase.database().reference()
     }
     
+    var usersRef: FIRDatabaseReference {
+        return mainRef.child(FIR_CHILD_USERS)
+    }
+    
     func saveUser(uid: String) {
         let profile: Dictionary<String, AnyObject> = ["firstName": "" as AnyObject, "lastName": "" as AnyObject]
-        mainRef.child("users").child(uid).child("profile").setValue(profile)
+        mainRef.child(FIR_CHILD_USERS).child(uid).child("profile").setValue(profile)
     }
 }
