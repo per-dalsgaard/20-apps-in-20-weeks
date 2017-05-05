@@ -29,6 +29,8 @@ class CameraViewController: AAPLCameraViewController, AAPLCameraViewControllerDe
         }
     }
     
+    // MARK: - IBActions
+    
     @IBAction func recordButtonPressed(sender: UIButton) {
         toggleMovieRecording()
     }
@@ -36,6 +38,8 @@ class CameraViewController: AAPLCameraViewController, AAPLCameraViewControllerDe
     @IBAction func changeCameraButtonPressed(sender: UIButton) {
         changeCamera()
     }
+    
+    // MARK: - AAPLCameraViewControllerDelegate
     
     func shouldEnableRecordUI(_ enable: Bool) {
         recordButton.isEnabled = enable
@@ -54,7 +58,7 @@ class CameraViewController: AAPLCameraViewController, AAPLCameraViewControllerDe
     }
     
     func videoRecordingComplete(_ videoURL: URL!) {
-        
+        performSegue(withIdentifier: "UsersViewController", sender: ["videoUrl": videoURL])
     }
     
     func videoRecordingFailed() {
@@ -62,11 +66,26 @@ class CameraViewController: AAPLCameraViewController, AAPLCameraViewControllerDe
     }
     
     func snapshotTaken(_ snapshotData: Data!) {
-        
+        performSegue(withIdentifier: "UsersViewController", sender: ["snapshotData": snapshotData])
+
     }
     
     func snapshotFailed() {
         
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "UsersViewController" {
+            if let usersViewController = segue.destination as? UsersViewController {
+                if let videoDict = sender as? Dictionary<String, URL> {
+                    usersViewController.videoUrl = videoDict["videoUrl"]
+                } else if let imageData = sender as? Dictionary<String, Data> {
+                    usersViewController.snapData = imageData["snapshotData"]
+                }
+            }
+        }
     }
 }
 

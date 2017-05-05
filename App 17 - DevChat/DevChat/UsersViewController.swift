@@ -14,6 +14,26 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var tableView: UITableView!
     
     private var users = [User]()
+    private var selectedUsers = Dictionary<String, User>()
+    
+    private var _snapData: Data?
+    private var _videoUrl: URL?
+    
+    var snapData: Data? {
+        get {
+            return _snapData
+        } set {
+            _snapData = newValue
+        }
+    }
+    
+    var videoUrl: URL? {
+        get {
+            return _videoUrl
+        } set {
+            _videoUrl = newValue
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
