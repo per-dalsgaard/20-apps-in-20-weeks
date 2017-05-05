@@ -12,15 +12,13 @@ class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var firstNameLabel: UILabel!
     
-    func updateUi(user: User) {
+    func updateUi(user: User, selected: Bool) {
         firstNameLabel.text = user.firstName
+        setCheckmark(selected: selected)
     }
-    
     
     func setCheckmark(selected: Bool) {
         let imageName = selected ? "messageindicatorchecked1" : "messageindicator1"
         accessoryView = UIImageView(image: UIImage(named: imageName))
     }
-    
-    
 }

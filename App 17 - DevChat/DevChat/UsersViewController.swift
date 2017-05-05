@@ -42,7 +42,9 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.delegate = self
         tableView.allowsMultipleSelection = true
         
-        DataService.instance.usersRef.observeSingleEvent(of: .value), with: { (snapshot) in
+        navigationItem.rightBarButtonItem?.isEnabled = false
+        
+        DataService.instance.usersRef.observeSingleEvent(of: .value) { (snapshot: FIRDataSnapshot) in
             if let users = snapshot.value as? Dictionary<String, AnyObject> {
                 for (key, value) in users {
                     if let dict = value as? Dictionary<String, AnyObject> {
@@ -51,6 +53,7 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
                                 let uid = key
                                 let user = User(uid: uid, firstName: firstName)
                                 self.users.append(user)
+
                             }
                         }
                     }
@@ -63,6 +66,7 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // MARK: - UITableViewDataSource
     
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -73,20 +77,42 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell {
-//            cell.updateUi(user: users[indexPath.row])
+            let user = users[indexPath.row]
+            let userSelected = selectedUsers[user.uid] != nil
+            cell.updateUi(user: user, selected: userSelected)
             return cell
         }
-        return UITableViewCell()
+        return UserTableViewCell()
     }
     
     // MARK: - UITableViewDelegate
 
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Test")
+        markCellForRow(at: indexPath, selected: true)
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        print("Hest")
+        markCellForRow(at: indexPath, selected: false)
+
+    }
+    
+    // MARK: - IBActions
+    
+    @IBAction func sendPullRequestButtonPressed(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    // MARK : - Miscellaneous
+    
+    func markCellForRow(at indexPath: IndexPath, selected: Bool) {
+        if let cell = tableView.cellForRow(at: indexPath) as? UserTableViewCell {
+            cell.setCheckmark(selected: selected)
+            let user = users[indexPath.row]
+            selectedUsers[user.uid] = selected ? user : nil
+        }
+        
+        if selectedUsers.count > 0 {
+            navigationItem.rightBarButtonItem?.isEnabled = true
+        }
     }
 }
