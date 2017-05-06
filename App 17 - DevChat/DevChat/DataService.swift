@@ -23,8 +23,20 @@ class DataService {
         return FIRDatabase.database().reference()
     }
     
+    var mainStorageRef: FIRStorageReference {
+        return FIRStorage.storage().reference()
+    }
+    
     var usersRef: FIRDatabaseReference {
         return mainRef.child(FIR_CHILD_USERS)
+    }
+    
+    var imagesStorageRef: FIRStorageReference {
+        return mainStorageRef.child("images")
+    }
+
+    var videosStorageRef: FIRStorageReference {
+        return mainStorageRef.child("videos")
     }
     
     func saveUser(uid: String) {
