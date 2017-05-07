@@ -1,4 +1,4 @@
-//
+    //
 //  UsersViewController.swift
 //  DevChat
 //
@@ -51,9 +51,11 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
                         if let profile = dict["profile"] as? Dictionary<String, AnyObject> {
                             if let firstName = profile["firstName"] as? String {
                                 let uid = key
-                                let user = User(uid: uid, firstName: firstName)
-                                self.users.append(user)
-
+                                let currentUsersUid = FIRAuth.auth()?.currentUser?.uid
+                                if uid != currentUsersUid {
+                                    let user = User(uid: uid, firstName: firstName)
+                                    self.users.append(user)
+                                }
                             }
                         }
                     }
@@ -99,7 +101,44 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
     // MARK: - IBActions
     
     @IBAction func sendPullRequestButtonPressed(_ sender: UIBarButtonItem) {
-        
+        if let videoUrl = _videoUrl {
+            let videoName = "\(NSUUID().uuidString)\(videoUrl.lastPathComponent)"
+            let ref = DataService.instance.videosStorageRef.child(videoName)
+            ref.putFile(videoUrl, metadata: nil, completion: { (meta: FIRStorageMetadata?, error: Error?) in
+                if error != nil {
+                    print("Error uploading video: \(error.debugDescription)")
+                } else {
+//                    let downloadUrl = metadata.downlo
+                    if let downloadUrl = meta?.downloadURL() {
+                        // TODO: Save this somewhere
+                        
+                        var users = [User]()
+                        for user in self.selectedUsers.values {
+                            users.append(user)
+                        }
+                        
+                        let userId = FIRAuth.auth()!.currentUser!.uid
+                        DataService.instance.sendMediaPullRequest(senderUid: userId, recipients: users, mediaUrl: downloadUrl)
+                        
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
+            })
+
+        } else if let snapData = _snapData {
+            let imageName = "\(NSUUID().uuidString).jpg"
+            let ref = DataService.instance.imagesStorageRef.child(imageName)
+            ref.put(snapData, metadata: nil, completion: { (meta: FIRStorageMetadata?, error: Error?) in
+                if error != nil{
+                    print("Error uploading snapshot: \(error.debugDescription)")
+                } else {
+                    if let downloadUrl = meta?.downloadURL() {
+                        // TODO: Save this somewhere
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                }
+            })
+        }
     }
     
     // MARK : - Miscellaneous
