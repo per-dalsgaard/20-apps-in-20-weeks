@@ -63,6 +63,9 @@ class DataService {
         }
         
         pr["watchers"] = watchersDict as AnyObject
-        pullRequestsRef.childByAutoId().setValue(pr)
+        let createdId = pullRequestsRef.childByAutoId()
+        createdId.setValue(pr)
+        
+        usersRef.child(senderUid).child("outgoingPullRequests").setValue(["\(createdId.key)": true])
     }
 }

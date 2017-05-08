@@ -119,12 +119,10 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
                         
                         let userId = FIRAuth.auth()!.currentUser!.uid
                         DataService.instance.sendMediaPullRequest(senderUid: userId, recipients: users, mediaUrl: downloadUrl)
-                        
-                        self.dismiss(animated: true, completion: nil)
                     }
                 }
             })
-
+            self.dismiss(animated: true, completion: nil)
         } else if let snapData = _snapData {
             let imageName = "\(NSUUID().uuidString).jpg"
             let ref = DataService.instance.imagesStorageRef.child(imageName)
@@ -134,10 +132,11 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
                 } else {
                     if let downloadUrl = meta?.downloadURL() {
                         // TODO: Save this somewhere
-                        self.dismiss(animated: true, completion: nil)
+                        
                     }
                 }
             })
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
