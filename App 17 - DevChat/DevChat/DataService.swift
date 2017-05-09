@@ -57,13 +57,15 @@ class DataService {
             pr["textSnippet"] = textSnippet as AnyObject
         }
         
+        let createdId = pullRequestsRef.childByAutoId()
+        
         var watchersDict = Dictionary<String, Bool>()
         for user in recipients {
             watchersDict[user.uid] = true
+            usersRef.child(user.uid).child("incomingPullRequests").setValue(["\(createdId.key)": true])
         }
         
         pr["watchers"] = watchersDict as AnyObject
-        let createdId = pullRequestsRef.childByAutoId()
         createdId.setValue(pr)
         
         usersRef.child(senderUid).child("outgoingPullRequests").setValue(["\(createdId.key)": true])
