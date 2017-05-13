@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC1E15F91EC7A4F1007E16C6 /* HttpService.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1E15F81EC7A4F1007E16C6 /* HttpService.m */; };
 		EC5212431EC511AE00EA25B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5212421EC511AE00EA25B3 /* main.m */; };
 		EC5212461EC511AE00EA25B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5212451EC511AE00EA25B3 /* AppDelegate.m */; };
 		EC5212491EC511AE00EA25B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5212481EC511AE00EA25B3 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC1E15F71EC7A4F1007E16C6 /* HttpService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpService.h; sourceTree = "<group>"; };
+		EC1E15F81EC7A4F1007E16C6 /* HttpService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpService.m; sourceTree = "<group>"; };
 		EC52123E1EC511AE00EA25B3 /* DevslopesTutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevslopesTutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5212421EC511AE00EA25B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC5212441EC511AE00EA25B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +42,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC1E15F61EC7A4DC007E16C6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EC1E15F71EC7A4F1007E16C6 /* HttpService.h */,
+				EC1E15F81EC7A4F1007E16C6 /* HttpService.m */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		EC5212351EC511AE00EA25B3 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +70,7 @@
 		EC5212401EC511AE00EA25B3 /* DevslopesTutorials */ = {
 			isa = PBXGroup;
 			children = (
+				EC1E15F61EC7A4DC007E16C6 /* Services */,
 				EC5212441EC511AE00EA25B3 /* AppDelegate.h */,
 				EC5212451EC511AE00EA25B3 /* AppDelegate.m */,
 				EC5212471EC511AE00EA25B3 /* ViewController.h */,
@@ -152,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5212491EC511AE00EA25B3 /* ViewController.m in Sources */,
+				EC1E15F91EC7A4F1007E16C6 /* HttpService.m in Sources */,
 				EC5212461EC511AE00EA25B3 /* AppDelegate.m in Sources */,
 				EC5212431EC511AE00EA25B3 /* main.m in Sources */,
 			);
@@ -314,6 +328,7 @@
 				EC5212571EC511AE00EA25B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
