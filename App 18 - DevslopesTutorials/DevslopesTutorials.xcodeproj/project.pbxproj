@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC1E15F91EC7A4F1007E16C6 /* HttpService.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1E15F81EC7A4F1007E16C6 /* HttpService.m */; };
+		EC1E15FF1ECA4CEC007E16C6 /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1E15FE1ECA4CEC007E16C6 /* VideoTableViewCell.m */; };
 		EC5212431EC511AE00EA25B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5212421EC511AE00EA25B3 /* main.m */; };
 		EC5212461EC511AE00EA25B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5212451EC511AE00EA25B3 /* AppDelegate.m */; };
 		EC5212491EC511AE00EA25B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5212481EC511AE00EA25B3 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		EC1E15F71EC7A4F1007E16C6 /* HttpService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpService.h; sourceTree = "<group>"; };
 		EC1E15F81EC7A4F1007E16C6 /* HttpService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpService.m; sourceTree = "<group>"; };
+		EC1E15FD1ECA4CEC007E16C6 /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoTableViewCell.h; sourceTree = "<group>"; };
+		EC1E15FE1ECA4CEC007E16C6 /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoTableViewCell.m; sourceTree = "<group>"; };
 		EC52123E1EC511AE00EA25B3 /* DevslopesTutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevslopesTutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5212421EC511AE00EA25B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC5212441EC511AE00EA25B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +54,29 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		EC1E15FA1ECA4CB3007E16C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EC1E15FB1ECA4CB5007E16C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC1E15FD1ECA4CEC007E16C6 /* VideoTableViewCell.h */,
+				EC1E15FE1ECA4CEC007E16C6 /* VideoTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EC1E15FC1ECA4CB6007E16C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EC5212351EC511AE00EA25B3 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +96,9 @@
 		EC5212401EC511AE00EA25B3 /* DevslopesTutorials */ = {
 			isa = PBXGroup;
 			children = (
+				EC1E15FC1ECA4CB6007E16C6 /* Model */,
+				EC1E15FB1ECA4CB5007E16C6 /* View */,
+				EC1E15FA1ECA4CB3007E16C6 /* Controller */,
 				EC1E15F61EC7A4DC007E16C6 /* Services */,
 				EC5212441EC511AE00EA25B3 /* AppDelegate.h */,
 				EC5212451EC511AE00EA25B3 /* AppDelegate.m */,
@@ -164,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1E15FF1ECA4CEC007E16C6 /* VideoTableViewCell.m in Sources */,
 				EC5212491EC511AE00EA25B3 /* ViewController.m in Sources */,
 				EC1E15F91EC7A4F1007E16C6 /* HttpService.m in Sources */,
 				EC5212461EC511AE00EA25B3 /* AppDelegate.m in Sources */,

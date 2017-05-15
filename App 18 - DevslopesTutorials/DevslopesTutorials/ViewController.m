@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HttpService.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [[HttpService instance] getTutorials:^(NSDictionary * _Nullable dataDict, NSString * _Nullable errorMessage) {
+        
+    }];
 }
 
 
