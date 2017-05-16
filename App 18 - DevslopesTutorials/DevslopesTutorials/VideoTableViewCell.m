@@ -7,6 +7,7 @@
 //
 
 #import "VideoTableViewCell.h"
+#import "Video.h"
 
 @interface VideoTableViewCell()
 
@@ -31,10 +32,13 @@
     self.layer.shadowOffset = CGSizeMake(0.0, 2.0);
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+- (void)updateUi:(nonnull Video*)video {
+    self.titleLabel.text = video.videoTitle;
+    self.descriptionLabel.text = video.videoDescription;
+    
+    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:video.thumbnailUrl]]];
+    self.thumbImageView.image = image;
 }
 
 @end
