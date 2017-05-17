@@ -10,6 +10,7 @@
 #import "HttpService.h"
 #import "VideoTableViewCell.h"
 #import "Video.h"
+#import "VideoViewController.h"
 
 @interface ViewController ()
 
@@ -83,7 +84,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Video *video = [self.videoList objectAtIndex:indexPath.row];
     
+    [self performSegueWithIdentifier:@"VideoViewController" sender:video];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    VideoViewController *videoViewController = (VideoViewController*)segue.destinationViewController;
+    videoViewController.video = (Video*)sender;
 }
 
 

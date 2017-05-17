@@ -11,6 +11,7 @@
 		EC1E15FF1ECA4CEC007E16C6 /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1E15FE1ECA4CEC007E16C6 /* VideoTableViewCell.m */; };
 		EC1E16021ECB9CA5007E16C6 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1E16011ECB9CA5007E16C6 /* Video.m */; };
 		EC1E16051ECB9F5B007E16C6 /* TestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1E16041ECB9F5B007E16C6 /* TestTableViewController.m */; };
+		EC1E16081ECCEBB5007E16C6 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1E16071ECCEBB5007E16C6 /* VideoViewController.m */; };
 		EC5212431EC511AE00EA25B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5212421EC511AE00EA25B3 /* main.m */; };
 		EC5212461EC511AE00EA25B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5212451EC511AE00EA25B3 /* AppDelegate.m */; };
 		EC5212491EC511AE00EA25B3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5212481EC511AE00EA25B3 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 		EC1E16011ECB9CA5007E16C6 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		EC1E16031ECB9F5B007E16C6 /* TestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewController.h; sourceTree = "<group>"; };
 		EC1E16041ECB9F5B007E16C6 /* TestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewController.m; sourceTree = "<group>"; };
+		EC1E16061ECCEBB5007E16C6 /* VideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		EC1E16071ECCEBB5007E16C6 /* VideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		EC52123E1EC511AE00EA25B3 /* DevslopesTutorials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevslopesTutorials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5212421EC511AE00EA25B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EC5212441EC511AE00EA25B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 				EC5212481EC511AE00EA25B3 /* ViewController.m */,
 				EC1E16031ECB9F5B007E16C6 /* TestTableViewController.h */,
 				EC1E16041ECB9F5B007E16C6 /* TestTableViewController.m */,
+				EC1E16061ECCEBB5007E16C6 /* VideoViewController.h */,
+				EC1E16071ECCEBB5007E16C6 /* VideoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				EC1E16021ECB9CA5007E16C6 /* Video.m in Sources */,
 				EC5212461EC511AE00EA25B3 /* AppDelegate.m in Sources */,
 				EC1E16051ECB9F5B007E16C6 /* TestTableViewController.m in Sources */,
+				EC1E16081ECCEBB5007E16C6 /* VideoViewController.m in Sources */,
 				EC5212431EC511AE00EA25B3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
