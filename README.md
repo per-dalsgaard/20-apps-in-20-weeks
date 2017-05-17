@@ -34,6 +34,6 @@ YouTube channels
 
 Other resources
 * [The Swift Programming Language](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/)
-* [Swift by Example](https://www.raywenderlich.com/)
+* [Swift by Example](http://brettbukowski.github.io/SwiftExamples/)
 * [The Official raywenderlich.com Swift Style Guide.](https://github.com/raywenderlich/swift-style-guide)
 * [Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
