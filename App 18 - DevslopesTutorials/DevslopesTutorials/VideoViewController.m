@@ -8,11 +8,13 @@
 
 #import "VideoViewController.h"
 #import "Video.h"
+#import "HttpService.h"
 
 @interface VideoViewController ()
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UITextView *commentTextView;
 
 @end
 
@@ -38,6 +40,20 @@
                     "styleNode.appendChild(styleText);\n"
                     "document.getElementsByTagName('head')[0].appendChild(styleNode);\n",css];
     [self.webView stringByEvaluatingJavaScriptFromString:js];
+}
+- (IBAction)postCommentButtonPressed:(id)sender {
+    NSString *comment = self.commentTextView.text;
+    NSString *username = @"PEDK"; // TODO
+    [[HttpService instance] postComment:comment withUsername:username completionHandler:^(NSArray * _Nullable dataArray, NSString * _Nullable errorMessage) {
+        if (dataArray) {
+            BOOL success = [[dataArray firstObject] boolValue];
+            if (success) {
+                NSLog(@"Comment saved");
+            } else {
+                NSLog(@"Der skete en fejl!!!");
+            }
+        }
+    }];
 }
 
 - (IBAction)doneButtonPressed:(id)sender {

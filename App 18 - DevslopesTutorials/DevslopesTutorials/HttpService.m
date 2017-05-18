@@ -47,4 +47,44 @@
     }] resume];
 }
 
+- (void)postComment:(NSString*)comment withUsername:(NSString*)username completionHandler:(nullable onComplete)completionHandler {
+    NSDictionary *commentDict = @{@"username":username,@"comment":comment};
+    
+    NSError *error;
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURL *url = [NSURL URLWithString:@"http://localhost:6069/comments"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    
+    [request setHTTPMethod:@"POST"];
+    
+    NSData *postData = [NSJSONSerialization dataWithJSONObject:commentDict options:0 error:&error];
+    
+    [request setHTTPBody:postData];
+    
+    NSURLSessionDataTask *postDataTask = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (data != nil) {
+            NSError *err;
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+            
+            if (err == nil) {
+                BOOL status = [[json objectForKey:@"status"] boolValue];
+                completionHandler(@[[NSNumber numberWithBool:status]], nil);
+            } else {
+                completionHandler(nil, @"Data is corrupt. Please try again!");
+            }        } else {
+            completionHandler(nil, @"Something went wrong!");
+        }
+        
+    }];
+    
+    [postDataTask resume];
+    
+
+}
+
 @end
