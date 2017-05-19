@@ -52,6 +52,8 @@
             } else {
                 NSLog(@"Der skete en fejl!!!");
             }
+        } else {
+            NSLog(@"%@", errorMessage);
         }
     }];
 }
