@@ -90,8 +90,11 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    VideoViewController *videoViewController = (VideoViewController*)segue.destinationViewController;
-    videoViewController.video = (Video*)sender;
+    if ([segue.identifier isEqualToString:@"VideoViewController"]) {
+        VideoViewController *videoViewController = (VideoViewController*)segue.destinationViewController;
+        videoViewController.video = (Video*)sender;
+    }
+
 }
 
 

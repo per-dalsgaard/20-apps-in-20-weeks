@@ -25,9 +25,24 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ug4-b7-BrM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9J-lv-lP5">
+                                        <rect key="frame" x="196" y="4" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="JAg-ot-i04"/>
+                                            <constraint firstAttribute="height" constant="22" id="T3e-tq-vCR"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="mgO-qn-hvs" kind="presentation" identifier="AboutViewController" id="Pq4-JB-gmu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.066666666666666666" green="0.5725490196078431" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="s9J-lv-lP5" firstAttribute="centerX" secondItem="ug4-b7-BrM" secondAttribute="centerX" id="6kv-lj-aQ8"/>
                                     <constraint firstAttribute="height" constant="83" id="hmY-Vl-ngc"/>
+                                    <constraint firstItem="s9J-lv-lP5" firstAttribute="top" secondItem="ug4-b7-BrM" secondAttribute="top" constant="4" id="kQ4-IO-ps1"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VM0-Sw-Luo">
@@ -122,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-37" y="129"/>
+            <point key="canvasLocation" x="-54" y="129"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="VZR-Rf-gXP">
@@ -229,7 +244,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFj-fQ-znJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.94202898550736" y="128.80434782608697"/>
+            <point key="canvasLocation" x="1122" y="435"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="ha6-2h-1la">
+            <objects>
+                <viewController id="mgO-qn-hvs" customClass="AboutViewController" customModule="DevslopesTutorials" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hiC-Tw-q7h"/>
+                        <viewControllerLayoutGuide type="bottom" id="PYD-hU-c47"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rpp-FT-W0e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vQe-Xc-ekE">
+                                <rect key="frame" x="148" y="20.000000000000007" width="118" height="99.666666666666686"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="Axi-oJ-Qfs"/>
+                                    <constraint firstAttribute="height" constant="100" id="lZb-kf-Qum"/>
+                                </constraints>
+                                <string key="text">CodePH
+Gl.Skovlundevej 8D 2740 Skovlunde Tlf. 51 90 26 35</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qlO-pC-IZB">
+                                <rect key="frame" x="107" y="127" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GFc-Q0-HPn"/>
+                                    <constraint firstAttribute="height" constant="200" id="rTJ-hh-3A4"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vQe-Xc-ekE" firstAttribute="centerX" secondItem="rpp-FT-W0e" secondAttribute="centerX" id="RZg-Tl-Y4b"/>
+                            <constraint firstItem="vQe-Xc-ekE" firstAttribute="top" secondItem="hiC-Tw-q7h" secondAttribute="bottom" id="U5e-WN-Saf"/>
+                            <constraint firstItem="qlO-pC-IZB" firstAttribute="centerX" secondItem="rpp-FT-W0e" secondAttribute="centerX" id="giH-Qr-4cs"/>
+                            <constraint firstItem="qlO-pC-IZB" firstAttribute="top" secondItem="vQe-Xc-ekE" secondAttribute="bottom" constant="8" id="lpX-yp-yB5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="qlO-pC-IZB" id="Xce-pw-JjD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uy-xZ-0tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121.7391304347827" y="-307.33695652173918"/>
         </scene>
     </scenes>
 </document>
