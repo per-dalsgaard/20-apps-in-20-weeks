@@ -37,3 +37,4 @@ Other resources
 * [Swift by Example](http://brettbukowski.github.io/SwiftExamples/)
 * [The Official raywenderlich.com Swift Style Guide.](https://github.com/raywenderlich/swift-style-guide)
 * [Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
+* [Understanding The New Swift 3 API Design Guidelines](http://blog.teamtreehouse.com/understanding-new-swift-3-api-design-guidelines)
