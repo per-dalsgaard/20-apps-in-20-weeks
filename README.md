@@ -20,6 +20,7 @@ Courses
 3. Udacity course: [Become an iOS Deveopler](https://www.udacity.com/course/ios-developer-nanodegree--nd003)
 
 Tutorials
+* [Pluralsight](https://app.pluralsight.com)
 * [100 days of Swift](http://samvlu.com/)
 * [design+code](https://designcode.io/)
 * [Ray Wenderlich](https://www.raywenderlich.com/)
