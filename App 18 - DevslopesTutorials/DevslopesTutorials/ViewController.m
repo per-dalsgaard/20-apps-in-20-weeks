@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -35,10 +34,19 @@
             NSMutableArray *arr = [[NSMutableArray alloc] init];
             for (NSDictionary *videoDict in dataArray) {
                 Video *video = [[Video alloc] init];
+                video.videoId = [[videoDict objectForKey:@"id"] intValue];
                 video.videoTitle = [videoDict objectForKey:@"title"];
                 video.videoDescription = [videoDict objectForKey:@"description"];
                 video.videoIframe = [videoDict objectForKey:@"iframe"];
                 video.thumbnailUrl =  [videoDict objectForKey:@"thumbnail"];
+                
+                NSArray *comments = [videoDict objectForKey:@"comments"];
+                NSMutableArray *currentComments = [[NSMutableArray alloc] init];
+                for (NSDictionary *commentDict in comments) {
+                    NSString *comment = commentDict[@"comment"];
+                    [currentComments addObject:comment];
+                }
+                video.comments = currentComments;
                 
                 [arr addObject:video];
             }
@@ -47,7 +55,7 @@
             [self updateTableData];
             
         } else if (errorMessage) {
-            
+            NSLog(@"%@", errorMessage);
         }
     }];
 }
@@ -68,12 +76,7 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    VideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VideoTableViewCell"];
-    
-    if (!cell) {
-        return [[VideoTableViewCell alloc] init];
-    }
-    
+    VideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VideoTableViewCell" forIndexPath:indexPath];
     return cell;
 }
 
@@ -94,8 +97,6 @@
         VideoViewController *videoViewController = (VideoViewController*)segue.destinationViewController;
         videoViewController.video = (Video*)sender;
     }
-
 }
-
 
 @end

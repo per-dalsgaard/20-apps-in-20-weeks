@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class Video;
 
-@interface VideoViewController : UIViewController <UIWebViewDelegate>
+@interface VideoViewController : UIViewController <UIWebViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) Video *video;
 

@@ -47,13 +47,13 @@
     }] resume];
 }
 
-- (void)postComment:(NSString*)comment withUsername:(NSString*)username completionHandler:(nullable onComplete)completionHandler {
+- (void)postComment:(NSString*)comment withUsername:(NSString*)username toVideo:(int)videoId completionHandler:(nullable onComplete)completionHandler {
     NSDictionary *commentDict = @{@"username":username,@"comment":comment};
     
     NSError *error;
     
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURL *url = [NSURL URLWithString:@"http://localhost:6069/comments"];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:6069/%d/comments", videoId]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
     [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
@@ -83,8 +83,28 @@
     }];
     
     [postDataTask resume];
-    
+}
 
+- (void)getCommentsForVideo:(int)videoId completionHandler:(nullable onComplete)completionHandler {
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%s/%d/comments", URL_BASE, videoId]];
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    [[session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        if (data != nil) {
+            NSError *err;
+            NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&err];
+            
+            if (err == nil) {
+                completionHandler(json, nil);
+            } else {
+                completionHandler(nil, @"Data is corrupt. Please try again!");
+            }
+        } else {
+            completionHandler(nil, @"Problem connecting to the server");
+        }
+        
+    }] resume];
 }
 
 @end

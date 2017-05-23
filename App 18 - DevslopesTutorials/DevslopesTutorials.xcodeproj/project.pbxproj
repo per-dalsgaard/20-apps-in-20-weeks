@@ -18,6 +18,7 @@
 		EC52124E1EC511AE00EA25B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC52124D1EC511AE00EA25B3 /* Assets.xcassets */; };
 		EC5212511EC511AE00EA25B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC52124F1EC511AE00EA25B3 /* LaunchScreen.storyboard */; };
 		ECA0D99F1ED2283A0034FD8D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA0D99E1ED2283A0034FD8D /* AboutViewController.swift */; };
+		ECA0D9A21ED36DC10034FD8D /* CommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA0D9A11ED36DC10034FD8D /* CommentTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		EC5212521EC511AE00EA25B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA0D99D1ED228390034FD8D /* DevslopesTutorials-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DevslopesTutorials-Bridging-Header.h"; sourceTree = "<group>"; };
 		ECA0D99E1ED2283A0034FD8D /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		ECA0D9A01ED36DC10034FD8D /* CommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTableViewCell.h; sourceTree = "<group>"; };
+		ECA0D9A11ED36DC10034FD8D /* CommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 			children = (
 				EC1E15FD1ECA4CEC007E16C6 /* VideoTableViewCell.h */,
 				EC1E15FE1ECA4CEC007E16C6 /* VideoTableViewCell.m */,
+				ECA0D9A01ED36DC10034FD8D /* CommentTableViewCell.h */,
+				ECA0D9A11ED36DC10034FD8D /* CommentTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC1E15FF1ECA4CEC007E16C6 /* VideoTableViewCell.m in Sources */,
+				ECA0D9A21ED36DC10034FD8D /* CommentTableViewCell.m in Sources */,
 				EC5212491EC511AE00EA25B3 /* ViewController.m in Sources */,
 				EC1E15F91EC7A4F1007E16C6 /* HttpService.m in Sources */,
 				EC1E16021ECB9CA5007E16C6 /* Video.m in Sources */,
