@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC24D2B51ED777B7008545DC /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC24D2B41ED777B7008545DC /* CalculatorBrain.swift */; };
 		EC4155BE1ED4D42700311708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4155BD1ED4D42700311708 /* AppDelegate.swift */; };
 		EC4155C01ED4D42700311708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4155BF1ED4D42700311708 /* ViewController.swift */; };
 		EC4155C31ED4D42800311708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC4155C11ED4D42800311708 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC24D2B41ED777B7008545DC /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 		EC4155BA1ED4D42700311708 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC4155BD1ED4D42700311708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC4155BF1ED4D42700311708 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC24D2B01ED4D5C8008545DC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC4155BD1ED4D42700311708 /* AppDelegate.swift */,
+				EC4155C41ED4D42800311708 /* Assets.xcassets */,
+				EC4155C61ED4D42800311708 /* LaunchScreen.storyboard */,
+				EC4155C91ED4D42800311708 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC24D2B11ED7778E008545DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EC4155BF1ED4D42700311708 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EC24D2B21ED77791008545DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EC24D2B31ED77793008545DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC24D2B41ED777B7008545DC /* CalculatorBrain.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EC4155B11ED4D42700311708 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +90,11 @@
 		EC4155BC1ED4D42700311708 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				EC4155BD1ED4D42700311708 /* AppDelegate.swift */,
-				EC4155BF1ED4D42700311708 /* ViewController.swift */,
+				EC24D2B31ED77793008545DC /* Model */,
+				EC24D2B21ED77791008545DC /* View */,
+				EC24D2B11ED7778E008545DC /* Controller */,
 				EC4155C11ED4D42800311708 /* Main.storyboard */,
-				EC4155C41ED4D42800311708 /* Assets.xcassets */,
-				EC4155C61ED4D42800311708 /* LaunchScreen.storyboard */,
-				EC4155C91ED4D42800311708 /* Info.plist */,
+				EC24D2B01ED4D5C8008545DC /* Supporting Files */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -137,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC24D2B51ED777B7008545DC /* CalculatorBrain.swift in Sources */,
 				EC4155C01ED4D42700311708 /* ViewController.swift in Sources */,
 				EC4155BE1ED4D42700311708 /* AppDelegate.swift in Sources */,
 			);
@@ -304,6 +340,7 @@
 				EC4155CE1ED4D42800311708 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
