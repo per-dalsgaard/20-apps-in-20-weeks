@@ -21,13 +21,18 @@ struct CalculatorBrain {
     
     private var operations = [
         "π": Operation.constant(Double.pi),
+        "e": Operation.constant(M_E),
         "√": Operation.unaryOperation(sqrt),
         "cos": Operation.unaryOperation(cos),
+        "sin": Operation.unaryOperation(sin),
+        "1/x": Operation.unaryOperation({ 1/$0 }),
+        "x^2": Operation.unaryOperation({ $0*$0 }),
         "±": Operation.unaryOperation({ -$0 }),
         "+": Operation.binaryOperation({ $0 + $1 }),
         "-": Operation.binaryOperation({ $0 - $1 }),
         "×": Operation.binaryOperation({ $0 * $1 }),
         "÷": Operation.binaryOperation({ $0 / $1 }),
+        "x^y": Operation.binaryOperation({ pow($0, $1) }),
         "=": Operation.equals
     ]
     
@@ -59,6 +64,12 @@ struct CalculatorBrain {
     }
     
     private var pendingBinaryOperation: PendingBinaryOperation?
+    
+    var resultIsPending: Bool {
+        get {
+            return pendingBinaryOperation != nil
+        }
+    }
     
     private struct PendingBinaryOperation {
         let function: (Double, Double) -> Double
