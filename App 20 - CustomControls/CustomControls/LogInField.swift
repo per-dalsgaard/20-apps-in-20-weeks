@@ -75,7 +75,7 @@ class LogInField: UIView, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        topLabel.endEditing(true)
+        inputTextField.endEditing(true)
         return false
     }
 }
