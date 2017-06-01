@@ -54,9 +54,11 @@ class LogInField: UIView, UITextFieldDelegate {
     
     // MARK: UITextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        let t = textField.text?.characters
+        if let t = Int(textField.text?.characters.count) {
+            
+        }
         
-        if textField.text.characters.count > 0 {
+        if Int(textField.text?.characters.count) > 0 {
             topLabel.textColor = UIColor.blue
         }
     }
