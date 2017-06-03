@@ -54,13 +54,22 @@ class LogInField: UIView, UITextFieldDelegate {
     
     // MARK: UITextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if let t = Int(textField.text?.characters.count) {
-            
+//        if let t = Int(textField.text?.characters.count) {
+//            
+//        }
+//        
+//        if textField.text?.characters.count > 0 {
+//            topLabel.textColor = UIColor.blue
+//        }
+        
+        if let text = textField.text, text.characters.count > 0 {
+            topLabel.textColor = .blue
         }
         
-        if Int(textField.text?.characters.count) > 0 {
-            topLabel.textColor = UIColor.blue
-        }
+//        let t: String? = "String"
+//        if let str = t, str.characters.count > 0 {
+//            print("Test")
+//        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
