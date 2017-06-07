@@ -8,20 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		ECD505631EE756500085846D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD505621EE756500085846D /* AppDelegate.swift */; };
-		ECD505651EE756500085846D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD505641EE756500085846D /* ViewController.swift */; };
-		ECD505681EE756500085846D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD505661EE756500085846D /* Main.storyboard */; };
 		ECD5056A1EE756500085846D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD505691EE756500085846D /* Assets.xcassets */; };
 		ECD5056D1EE756500085846D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD5056B1EE756500085846D /* LaunchScreen.storyboard */; };
+		ECD856EF1EE89C6900FA9906 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD856EE1EE89C6900FA9906 /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ECD5055F1EE756500085846D /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD505621EE756500085846D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECD505641EE756500085846D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECD505671EE756500085846D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECD505691EE756500085846D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECD5056C1EE756500085846D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECD5056E1EE756500085846D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECD856EE1EE89C6900FA9906 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +53,10 @@
 			isa = PBXGroup;
 			children = (
 				ECD505621EE756500085846D /* AppDelegate.swift */,
-				ECD505641EE756500085846D /* ViewController.swift */,
-				ECD505661EE756500085846D /* Main.storyboard */,
 				ECD505691EE756500085846D /* Assets.xcassets */,
 				ECD5056B1EE756500085846D /* LaunchScreen.storyboard */,
 				ECD5056E1EE756500085846D /* Info.plist */,
+				ECD856EE1EE89C6900FA9906 /* HomeController.swift */,
 			);
 			path = TwitterClone;
 			sourceTree = "<group>";
@@ -126,7 +123,6 @@
 			files = (
 				ECD5056D1EE756500085846D /* LaunchScreen.storyboard in Resources */,
 				ECD5056A1EE756500085846D /* Assets.xcassets in Resources */,
-				ECD505681EE756500085846D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,22 +133,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD505651EE756500085846D /* ViewController.swift in Sources */,
 				ECD505631EE756500085846D /* AppDelegate.swift in Sources */,
+				ECD856EF1EE89C6900FA9906 /* HomeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ECD505661EE756500085846D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECD505671EE756500085846D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECD5056B1EE756500085846D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -304,6 +292,7 @@
 				ECD505731EE756500085846D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
