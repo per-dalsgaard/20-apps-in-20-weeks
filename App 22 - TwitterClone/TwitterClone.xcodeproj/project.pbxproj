@@ -11,6 +11,7 @@
 		ECD5056A1EE756500085846D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD505691EE756500085846D /* Assets.xcassets */; };
 		ECD5056D1EE756500085846D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD5056B1EE756500085846D /* LaunchScreen.storyboard */; };
 		ECD856EF1EE89C6900FA9906 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD856EE1EE89C6900FA9906 /* HomeController.swift */; };
+		ECD856F51EECA53A00FA9906 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD856F41EECA53A00FA9906 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		ECD5056C1EE756500085846D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECD5056E1EE756500085846D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECD856EE1EE89C6900FA9906 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		ECD856F41EECA53A00FA9906 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +54,46 @@
 		ECD505611EE756500085846D /* TwitterClone */ = {
 			isa = PBXGroup;
 			children = (
+				ECD856F31EECA51E00FA9906 /* Model */,
+				ECD856F21EECA50C00FA9906 /* View */,
+				ECD856F11EECA50A00FA9906 /* Controller */,
 				ECD505621EE756500085846D /* AppDelegate.swift */,
 				ECD505691EE756500085846D /* Assets.xcassets */,
 				ECD5056B1EE756500085846D /* LaunchScreen.storyboard */,
 				ECD5056E1EE756500085846D /* Info.plist */,
 				ECD856EE1EE89C6900FA9906 /* HomeController.swift */,
+				ECD856F01EECA50300FA9906 /* New Group */,
 			);
 			path = TwitterClone;
+			sourceTree = "<group>";
+		};
+		ECD856F01EECA50300FA9906 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		ECD856F11EECA50A00FA9906 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ECD856F21EECA50C00FA9906 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECD856F41EECA53A00FA9906 /* UserCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ECD856F31EECA51E00FA9906 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +170,7 @@
 			files = (
 				ECD505631EE756500085846D /* AppDelegate.swift in Sources */,
 				ECD856EF1EE89C6900FA9906 /* HomeController.swift in Sources */,
+				ECD856F51EECA53A00FA9906 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
