@@ -51,6 +51,7 @@ class LogInField: UIView, UITextFieldDelegate {
     // MARK: UI Methods
     
     private func setupControls() {
+        print("Bounds height: \(boundsHeight)")
         addSubview(topLabel)
         topLabel.frame = CGRect(x: 0, y: boundsHeight / 2, width: boundsWidth, height: 20)
         topLabel.alpha = 0
@@ -61,51 +62,50 @@ class LogInField: UIView, UITextFieldDelegate {
 
         addSubview(inputTextField)
         inputTextField.frame = CGRect(x: 0, y: 19, width: boundsWidth, height: 20)
+        inputTextField.delegate = self
         inputTextField.placeholder = type == .Email ? "Email" : "Password"
         inputTextField.isSecureTextEntry = type == .Password
         inputTextField.textAlignment = .left
+        
+        inputTextField.addTarget(self, action: #selector(LogInField.checkTopLabel(_:)), for: .editingChanged)
         
         addSubview(bottomLineView)
         bottomLineView.backgroundColor = .lightGray
         bottomLineView.frame = CGRect(x: 0, y: boundsHeight, width: boundsWidth, height: 1)
     }
-
     
     // MARK: UITextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
-//        if let t = Int(textField.text?.characters.count) {
-//            
-//        }
-//        
-//        if textField.text?.characters.count > 0 {
-//            topLabel.textColor = UIColor.blue
-//        }
-        
-        if let text = textField.text, text.characters.count > 0 {
-            inputTextField.textColor = .blue
+        if let text = textField.text, !text.characters.isEmpty {
+            topLabel.textColor = .blue
         }
-        
-//        let t: String? = "String"
-//        if let str = t, str.characters.count > 0 {
-//            print("Test")
-//        }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-//        if textField.text?.characters.count > 0 {
-//            inputTextField.textColor = UIColor.lightGray
-//        } else {
-//            UIView.animate(withDuration: 0.25, animations: { 
-//                self.inputTextField.alpha = 0
-//            }, completion: { done in
-//                self.inputTextField.textColor = UIColor.blue
-//                
-//            })
-//        }
+        if let text = textField.text, !text.characters.isEmpty {
+            topLabel.textColor = UIColor.lightGray
+        } else {
+            UIView.animate(withDuration: 0.25, animations: { 
+                self.topLabel.alpha = 0
+            }, completion: { done in
+                self.topLabel.textColor = UIColor.blue
+                self.topLabel.frame = CGRect(x: 0, y: self.boundsHeight / 2, width: self.boundsWidth, height: 1)
+            })
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         inputTextField.endEditing(true)
         return false
+    }
+    
+    func checkTopLabel(_ sender: UITextField!) {
+        print("Check!!")
+        guard let text = sender.text, !text.characters.isEmpty else { return }
+        
+        UIView.animate(withDuration: 0.5) { 
+            self.topLabel.alpha = 1
+            self.topLabel.frame = CGRect(x: 0, y: 2, width: self.boundsWidth, height: 20)
+        }
     }
 }

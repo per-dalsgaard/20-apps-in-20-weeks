@@ -16,8 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        inputEmail = LogInField(frame: CGRect(x: view.width / 2 - 100, y: view.centerY - 20, width: 200, height: 400), type: .Email)
-        inputPassword = LogInField(frame: CGRect(x: view.width / 2 - 100, y: view.centerY + 20, width: 200, height: 400), type: .Password)
+        // x = 100 til venstre for midten
+        // y = 20 over midten
+        
+        inputEmail = LogInField(frame: CGRect(x: view.width / 2 - 100, y: view.centerY - 20, width: 200, height: 40), type: .Email)
+        inputPassword = LogInField(frame: CGRect(x: view.width / 2 - 100, y: view.centerY + 20, width: 200, height: 40), type: .Password)
         
         view.addSubview(inputEmail)
         view.addSubview(inputPassword)
